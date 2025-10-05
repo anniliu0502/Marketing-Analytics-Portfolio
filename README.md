@@ -15,10 +15,12 @@ The analysis explores **customer behavior and segmentation** using techniques li
 ---
 
 ## 🧩 Restuarant Project Overview
-**Goal:**  
-To analyze customer-level data to identify patterns, reduce dimensionality, and predict marketing outcomes for better targeting strategies.
+**Course: University of Florida | Customer Analysis |**
 
-**Project 1: Customer Segmentation Analysis**
+**Goal:**  
+- To analyze customer-level data to identify patterns, reduce dimensionality, and predict marketing outcomes for better targeting strategies.
+
+**Team Project 2: Customer Segmentation Analysis**
 - Focus: Identifying distinct customer groups through PCA and hierarchical clustering
 - Methods & Techniques:
 -  Principal Component Analysis (PCA): Reduced 15 psychographic variables into 4 interpretable factors
@@ -43,7 +45,7 @@ Validation: Bartlett's test, KMO (MSA = 0.66), Silhouette analysis (0.62)
 Tools: R (psych, cluster, factoextra, dplyr, ggplot2)
 
 
-**Project 2: Restaurant Perceptual Mapping**
+**Team Project 3: Restaurant Perceptual Mapping**
 Focus: Understanding competitive positioning and customer preferences through multidimensional scaling
 Methods & Techniques:
 - Multidimensional Scaling (MDS): Created perceptual maps of 12 restaurants across preference dimensions
