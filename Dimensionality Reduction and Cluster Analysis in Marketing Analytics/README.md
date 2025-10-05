@@ -56,7 +56,7 @@ Chemical Property Relationships (PCA Biplot Insights):
 - White wine: Greater variation along PC1, quality gradient visible (lower-quality left, higher-quality right)
 
 ----
-**2. Automotive Market Segmentation: Psychographic Profiling**
+**2. Automotive Market Segmentation: Psychographic Profiling** <br/>
 Business Problem: Identify distinct customer segments in the new car market based on attitudes, preferences, and ideal price points to inform targeted marketing strategies. <br/>
 Dataset: Consumer responses to psychographic survey
 
@@ -64,16 +64,16 @@ Dataset: Consumer responses to psychographic survey
 - Ideal price point preference
 - Purchase history (ignored for segmentation)
 
-**Methodology:**  
+**Methodology:**  <br/>
 Part A: Optimal Cluster Identification <br/>
 Applied K-Means clustering with evaluation metrics:
 
 - Within-cluster sum of squares (WCSS) elbow method
 - Silhouette analysis for validation
 
-Elbow Chart Results:
+Elbow Chart Results: <br/>
 
-Elbow point at K=3 or K=4
+Elbow point at K=3 or K=4 <br/>
 
 Silhouette Score Comparison: <br/>
 
@@ -110,7 +110,7 @@ Explained variance analysis
 Scree plot elbow method
 
 
-**Applied Varimax rotation for interpretability**
+**Applied Varimax rotation for interpretability** <br/>
 
 Factor Loading Matrix Results: <br/>
 Factor 1: Car Features & Driving Experience (Q1-Q8)
