@@ -58,7 +58,8 @@ Chemical Property Relationships (PCA Biplot Insights):
 ----
 **2. Automotive Market Segmentation: Psychographic Profiling** <br/>
 Business Problem: Identify distinct customer segments in the new car market based on attitudes, preferences, and ideal price points to inform targeted marketing strategies. <br/>
-Dataset: Consumer responses to psychographic survey
+
+Dataset: Consumer responses to psychographic survey 
 
 - 17 attitude questions (Q1-Q17) covering features, performance, style, emotions
 - Ideal price point preference
