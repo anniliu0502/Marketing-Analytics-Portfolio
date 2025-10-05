@@ -12,7 +12,7 @@ Here are selected projects demonstrating my analytical, technical, and strategic
 This repository contains my graduate-level marketing analytics project completed in R using Quarto (.qmd).  
 And the analysis explores customer behavior and segmentation using techniques like PCA, K-Means, and KNN to extract business insights from marketing data.
 
-**Marketing Research Project - Starbucks Reward Program Optimization**
+**Marketing Research Project - Starbucks Reward Program Optimization: **
  This project analyzes Starbucks' rewards program effectiveness and identifies opportunities to strengthen customer engagement through optimized promotional strategies. Using primary market research, the study evaluates consumer perceptions of the Starbucks Rewards system and provides data-driven recommendations for improving the promotion component of the marketing mix. 
 
 ---
