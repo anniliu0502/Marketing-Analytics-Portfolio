@@ -172,47 +172,48 @@ The report includes:
 ## Skills Demonstrated
 Market Research:
 
-Survey design and questionnaire development
-Likert scale and semantic differential measurement
-Ranking and constant-sum scaling
-Conjoint-style preference analysis
+- Survey design and questionnaire development
+- Likert scale and semantic differential measurement
+- Ranking and constant-sum scaling
+- Conjoint-style preference analysis
 
 ## Data Analysis:
 
-Excel pivot tables and formulas
-Cross-tabulation
-Satisfaction indexing
-Preference scoring
+- Excel pivot tables and formulas
+- Cross-tabulation
+- Satisfaction indexing
+- Preference scoring
 
 ## Strategic Marketing:
 
-4Ps framework application
-Customer segmentation
-Competitive positioning analysis
-Data-driven recommendation development
-Research Design Features
-Question Types Employed:
+- 4Ps framework application
+- Customer segmentation
+- Competitive positioning analysis
+- Data-driven recommendation development
+- Research Design Features
 
-Likert Scales: Familiarity, satisfaction, likelihood measures
-Ranking Questions: Brand preference, ordering method preference
-Constant-Sum Allocation: Coffee attribute importance (100 points)
-Semantic Differential: Starbucks attribute evaluation
-Hypothetical Scenarios: Bonus star impact, enhanced earning rates
-Multiple Choice: Demographics, redemption preferences
+## Question Types Employed:
+
+- Likert Scales: Familiarity, satisfaction, likelihood measures
+- Ranking Questions: Brand preference, ordering method preference
+- Constant-Sum Allocation: Coffee attribute importance (100 points)
+- Semantic Differential: Starbucks attribute evaluation
+- Hypothetical Scenarios: Bonus star impact, enhanced earning rates
+- Multiple Choice: Demographics, redemption preferences
 
 ## Measurement Rigor:
 
-Balanced scale anchors
-Comprehensive attribute coverage
-Scenario-based preference elicitation
-Multiple measurement methods for triangulation
+- Balanced scale anchors
+- Comprehensive attribute coverage
+- Scenario-based preference elicitation
+- Multiple measurement methods for triangulation
 
 
 ---
 
  ## ✍️ Author
 Anni Liu
-Marketing Analytics | R & Python | Customer Segmentation & Perceptual Mapping
+Marketing Analytics | R & Python & Excel | Customer Segmentation & Perceptual Mapping & Statistical Analysis 
 
 _Transforming customer data into strategic business insights_
  
