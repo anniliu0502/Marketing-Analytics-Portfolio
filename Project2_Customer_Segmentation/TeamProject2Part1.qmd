@@ -1,0 +1,162 @@
+---
+title: "TeamProject2_p1"
+author: "Anni Liu"
+format: html
+output: html_document
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+```{r}
+library(FactoMineR)
+library(factoextra)
+library(tidyverse)
+library(ggplot2)
+library(reshape2)
+library(vtable)
+library(GPArotation)
+library(nFactors)
+library(dplyr)
+library(GPArotation)
+library(gplots)
+library(RColorBrewer)
+library(stats)
+set.seed(1)
+```
+
+**Read file TP2_PCA Data**
+
+```{r}
+data <- read.csv("C:/Users/liua8/Desktop/customer analysis/TP2_PCAdata.csv", header=TRUE)
+st(data[,-1])
+
+```
+
+**Get the overall mean and variation**
+
+```{r}
+# Calculate the mean and standard deviation for each question
+means <- colMeans(data[, -1], na.rm = TRUE)  # Exclude the CustID column
+sds <- apply(data[, -1], 2, sd, na.rm = TRUE)
+
+# Overall mean and standard deviation
+overall_mean <- mean(means)
+overall_sd <- mean(sds)
+```
+
+-   **`overall_mean - 3 * overall_sd`**: This calculates a value that is three standard deviations below the overall mean.
+
+-   **`overall_mean + 3 * overall_sd`**: This calculates a value that is three standard deviations above the overall mean.
+
+-   It looks like it is normally distributed.
+
+```{r}
+# Generate a sequence of numbers for the x-axis
+x <- seq(overall_mean - 3 * overall_sd, overall_mean + 3 * overall_sd, length = 100)
+
+# Calculate the y-values for the normal distribution
+y <- dnorm(x, mean = overall_mean, sd = overall_sd)
+
+# Plot the bell curve
+plot(x, y, type = "l", lwd = 2, col = "blue", 
+     main = "Bell Curve (Normal Distribution)", 
+     xlab = "Score", ylab = "Density")
+
+# Add shading under the curve (optional)
+polygon(c(min(x), x, max(x)), c(0, y, 0), col = "skyblue", border = NA)
+```
+
+**Correlation Matrix and Graph**
+
+```{r}
+numeric_columns <- sapply(data[, -1], is.numeric)
+cor_matrix <- cor(data[, -1][, numeric_columns])
+
+# Print the correlation matrix
+print(cor_matrix)
+```
+
+```{r}
+library(corrplot)
+corrplot(cor_matrix, method = "color", type ="upper", addCoef.col = "black", tl.cex = 0.8, number.cex = 0.7, title = "Correlation Matrix", mar = c(0, 0, 1, 0))
+```
+
+**Factor Analysis-Calculate the eigenvalues and determine numbers of factors**
+
+```{r}
+  ## Determine Number of Factors
+question_factors <- select(data, -CustID)  
+eigen(cor(question_factors))$values
+```
+
+**Since there are 4 factors that are above 1, we have 4 factors**
+
+```{r}
+# Re-run factor analysis
+result <- factanal(question_factors, factors = 4)
+print(result)
+```
+
+**Here is the component matrix without rotation**
+
+```{r}
+component_matrix <- factanal(question_factors,factors = 4, rotation = "none")
+component_matrix$loadings
+```
+
+**Heat map for factor loading–Bartlett Test**
+
+```{r}
+## Run Factor Analysis with 4 Factors and Oblique Rotation
+question.fa <- factanal(question_factors, factors = 4, rotation="oblimin", scores="Bartlett")
+```
+
+```{r}
+## Print a Heatmap of Factor Loadings
+heatmap.2(question.fa$loadings, col=brewer.pal(9, "Reds"), trace="none", key=FALSE, dend="none", Colv=FALSE, cexCol = 1, margins=c(12,8),main="Factor Loadings from Survey")
+```
+
+```{r}
+bartlett.test(question_factors)
+```
+
+**KMO Test**
+
+```{r}
+#measure how suited data is for factor analysis
+#KMO<0.5: unacceptable 
+library(psych)
+question_data <- data[, -1]  # Exclude the CustID column
+kmo_result <- KMO(cor(question_data))
+print(kmo_result)
+
+```
+
+Overall MSA=0.66, which means it is suited for factor analysis.
+
+We should eliminate questions 5, 8, 11 because they all score below 0.5. Therefore, we should keep 12 questions.
+
+**pairs.panels corr-plot**
+
+```{r}
+pairs.panels(question_data)
+```
+
+**PCA Chart**
+
+```{r}
+
+# Clean the data
+pca_data_clean <- data %>% select(-CustID)
+
+# Perform PCA
+pca_result <- PCA(pca_data_clean, scale.unit = TRUE, graph = FALSE)
+
+# Visualize PCA variables
+fviz_pca_var(pca_result, col.var = "cos2", repel = TRUE)
+```

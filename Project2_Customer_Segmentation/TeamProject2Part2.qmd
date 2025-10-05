@@ -1,0 +1,119 @@
+---
+title: "TeamProject2Part2"
+author: "Anni Liu"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+# Install packages
+install.packages("nFactors")
+install.packages("dplyr")
+install.packages("GPArotation")
+install.packages("gplots")
+install.packages("RColorBrewer")
+install.packages('vtable')
+
+# Load packages and set seed
+library(nFactors)
+library(dplyr)
+library(GPArotation)
+library(gplots)
+library(RColorBrewer)
+library(vtable)
+set.seed(1)
+```
+
+Read TP_CAdata.csv
+
+```{r}
+seg <- read.csv("C:/Users/liua8/Desktop/customer analysis/TP_CAdata.csv", header=TRUE)
+st(seg[,-1])
+```
+
+Hierarchical Cluster Analysis: We decide to run HCA with variables that explain the needs of customers such as Atmosphere, AvgCost, LunchFreq, DinnerFreq, FoodImp, ServImp, NumInParty, NumKids. These variables cover the range of customers behavior that are related to dining at a restaurant.
+
+```{r}
+# Run hierarchical clustering with base variables
+seg_hclust <- hclust(dist(scale(cbind(
+  seg$AtmosImp, 
+  seg$AvgCost, 
+  seg$LunchFreq, 
+  seg$DinnerFreq, 
+  seg$FoodImp, 
+  seg$ServImp, 
+  seg$NumInParty
+  
+))), method="complete")
+```
+
+Determine the number of segments in your data using an elbow plot
+
+```{r}
+# Elbow plot for first 10 segments
+x <- c(1:10)
+sort_height <- sort(seg_hclust$height,decreasing=TRUE)
+y <- sort_height[1:10]
+plot(x,y); lines(x,y,col="blue")
+```
+
+After run the elbow chart, we decide that there is 5 clusters.
+
+```{r}
+ # Run k-means with 5 segments
+seg_kmeans <- kmeans(x = data.frame(seg$AtmosImp, seg$LunchFreq, seg$FoodImp, seg$AvgCost,
+seg$DinnerFreq, seg$ServImp, seg$NumInParty, seg$NumKids), 5)
+```
+
+Append the original dataset (seg) with a new column that is equal to the segment number
+
+```{r}
+# Add segment number back to original data
+segment = seg_kmeans$cluster
+segmentation_result <- cbind(seg, segment)
+```
+
+Export this data to a.csv file
+
+```{r}
+# Export data to a CSV file
+write.csv(segmentation_result, file = "C:/Users/liua8/Desktop/customer analysis/evaluation_result.csv", row.names =FALSE) ## Name file evaluation_result.csv
+```
+
+Euclidean Distance
+
+```{r}
+# Select relevant columns (excluding CustID and Gender for this example)
+distance_data <- seg[, c("AtmosImp", "AvgCost", "LunchFreq", "DinnerFreq", "FoodImp", "ServImp", "NumInParty")]
+
+# Calculate Euclidean distance
+euclidean_dist <- dist(data, method = "euclidean")
+
+# View the result
+print(euclidean_dist)
+```
+
+```{r}
+# Perform hierarchical clustering
+hc <- hclust(euclidean_dist, method = "ward.D2")
+
+# Plot the dendrogram
+plot(hc)
+
+# Cut the dendrogram into 5 clusters
+clusters <- cutree(hc, k = 6)
+
+# Add cluster assignments to the original data
+seg$Cluster <- clusters
+
+# View the first few rows of the data with cluster assignments
+head(seg)
+```
