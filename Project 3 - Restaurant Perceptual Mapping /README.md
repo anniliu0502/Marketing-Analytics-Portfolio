@@ -24,25 +24,25 @@ Map the competitive restaurant landscape to:
 **Analytical Approach**
 **1. Unfolding Analysis - Model Selection**
 
-Tested four configurations to find optimal representation:
-- Interval Scaling vs Ordinal Scaling
-- Row Conditionality vs Matrix Conditionality
+- Tested four configurations to find optimal representation:
+ - Interval Scaling vs Ordinal Scaling
+ - Row Conditionality vs Matrix Conditionality
 
-Optimal Model: Ordinal Scaling with Row Conditionality
-- Stress value: 0.00596 (lowest across all models)
-- Iterations: 10,000
-- Validation: Shepard diagram shows excellent fit (points tightly on line)
+- Optimal Model: Ordinal Scaling with Row Conditionality
+ - Stress value: 0.00596 (lowest across all models)
+ - Iterations: 10,000
+ - Validation: Shepard diagram shows excellent fit (points tightly on line)
 
 **2. Tie Handling**
 
-Used ties="secondary" specification for customers with identical ratings (e.g., Customer 4 rated Mildred's and Shoney's both 6.5)
+- Used ties="secondary" specification for customers with identical ratings (e.g., Customer 4 rated Mildred's and Shoney's both 6.5)
 
-Secondary specification produced lower stress due to additional constraints
-Better handling of ordinal relationships
+- Secondary specification produced lower stress due to additional constraints
+- Better handling of ordinal relationships
 
 **3. Stress Decomposition Analysis**
 
-Identified restaurants contributing most/least alignment:
+- Identified restaurants contributing most/least alignment:
 
 - High stress (misaligned): Emiliano's, Leo's 706
 - Low stress (well-aligned): Paramount Grill, Shoney's
@@ -51,7 +51,7 @@ Identified restaurants contributing most/least alignment:
 
 **💡 Key Findings**
 **Restaurant Clustering**
-Three natural competitive groups emerged:
+- Three natural competitive groups emerged:
 **Premium Tier** (High food quality + location, Dimension 1)
 
 Paramount Grill
