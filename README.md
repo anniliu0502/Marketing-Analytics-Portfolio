@@ -1,20 +1,23 @@
-My marketing Analytics projects using Python and R - including K-means, PCA, and KNN for Business Insights.
-# 🌿 Marketing Analytics Portfolio
+My marketing Analytics projects using Python, R, and Excel - including K-means, PCA, and KNN for Business Insights.
+# Marketing Analytics Portfolio
 
-Hi there! 👋  
+Hi there! 
 I'm Anni, a Marketing Analytics graduate passionate about turning data into actionable business insights.  
 Here are selected projects demonstrating my analytical, technical, and strategic skills.
 
 ---
-# 📊 Marketing Analytics Projects
-🎯 Restaurant Analytics Portfolio
+# Marketing Analytics Projects
+**Restaurant Analytics Portfolio**
 A collection of customer analysis projects applying statistical methods and machine learning to understand restaurant consumer behavior and optimize business strategy.
-This repository contains my graduate-level marketing analytics project completed in R using **Quarto (.qmd)**.  
-The analysis explores **customer behavior and segmentation** using techniques like **PCA, K-Means, and KNN** to extract business insights from marketing data.
+This repository contains my graduate-level marketing analytics project completed in R using Quarto (.qmd).  
+The analysis explores **customer behavior and segmentation** using techniques like PCA, K-Means, and KNN to extract business insights from marketing data.
+
+**Marketing Research Project - Starbucks Reward Program Optimization**
+This project analyzes Starbucks' rewards program effectiveness and identifies opportunities to strengthen customer engagement through optimized promotional strategies. Using primary market research, the study evaluates consumer perceptions of the Starbucks Rewards system and provides data-driven recommendations for improving the promotion component of the marketing mix. 
 
 ---
 
-## 🧩 Restuarant Project Overview
+##  Restuarant Project Overview
 **Course: University of Florida | Customer Analysis |**
 
 **Goal:**  
@@ -89,9 +92,9 @@ Demographic Insights:
 Tools: R (smacof for MDS, ggplot2 for visualization, factoextra)
 
 **Techniques Used:**
-- 🧮 **Principal Component Analysis (PCA)** — to reduce feature complexity and visualize data structure  
-- 🎯 **K-Means Clustering** — to identify distinct customer groups  
-- 🤖 **K-Nearest Neighbors (KNN)** — to predict customer response or purchase behavior
+-  **Principal Component Analysis (PCA)** — to reduce feature complexity and visualize data structure  
+-  **K-Means Clustering** — to identify distinct customer groups  
+-  **K-Nearest Neighbors (KNN)** — to predict customer response or purchase behavior
 
 **Statistical Methods:**
 
@@ -124,7 +127,7 @@ Preference modeling
 
 ---
 
-## 🧠 Key Insights
+## Key Insights
 - PCA reduced the dataset from 15+ variables to a few key behavioral components that explained over **80% of variance**.  
 - K-Means identified **4 distinct customer segments** differing by purchase frequency and engagement level.  
 - KNN achieved an accuracy of **~80%** in predicting customer response.  
@@ -132,7 +135,7 @@ Preference modeling
 
 ---
 
-## 💡 Business Impact
+##  Business Impact
 Both projects demonstrate ability to:
 
 Extract actionable insights from complex customer data
@@ -150,7 +153,7 @@ Balance technical rigor with practical business application
 - Provided specific, actionable strategies for atmosphere enhancement, pricing, and positioning
 ---
 
-## 📈 Visualization Examples
+##  Visualization Examples
 The report includes:
 - PCA scree plots showing explained variance  
 - Cluster visualizations of customer segments  
@@ -164,16 +167,45 @@ The report includes:
 - Feature reduction (via PCA) improved model interpretability and reduced noise.
 
 ---
+## Marketing Research Project Overview
 
-## 📁 Repository Structure
+## Skills Demonstrated
+Market Research:
 
-Project 1: Customer Segmentation (19-page analysis)
+Survey design and questionnaire development
+Likert scale and semantic differential measurement
+Ranking and constant-sum scaling
+Conjoint-style preference analysis
 
-Project 2: Perceptual Mapping (19-page analysis)
+## Data Analysis:
 
-Full R code and statistical outputs
+Excel pivot tables and formulas
+Cross-tabulation
+Satisfaction indexing
+Preference scoring
 
-Comprehensive visualizations and interpretation
+## Strategic Marketing:
+
+4Ps framework application
+Customer segmentation
+Competitive positioning analysis
+Data-driven recommendation development
+Research Design Features
+Question Types Employed:
+
+Likert Scales: Familiarity, satisfaction, likelihood measures
+Ranking Questions: Brand preference, ordering method preference
+Constant-Sum Allocation: Coffee attribute importance (100 points)
+Semantic Differential: Starbucks attribute evaluation
+Hypothetical Scenarios: Bonus star impact, enhanced earning rates
+Multiple Choice: Demographics, redemption preferences
+
+## Measurement Rigor:
+
+Balanced scale anchors
+Comprehensive attribute coverage
+Scenario-based preference elicitation
+Multiple measurement methods for triangulation
 
 
 ---
