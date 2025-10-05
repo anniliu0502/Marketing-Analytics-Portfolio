@@ -6,71 +6,62 @@ I'm Anni, a Marketing Analytics graduate passionate about turning data into acti
 Here are selected projects demonstrating my analytical, technical, and strategic skills.
 
 ---
+# 📊 Marketing Analytics Project — Team Project 3 0n Resturants' perceptions, ratings, and customer demographic information. 
 
-## 🧩 1. Customer Segmentation using K-Means Clustering
-**Goal:** Identify distinct customer groups to improve targeted marketing campaigns/ giving recoomendation to the resturants to improve the business.
-
-**Dataset:** Retail customer transactions (simulated)  
-**Tools:** Python (pandas, sklearn, matplotlib, seaborn)  
-
-**Methods:**
-- Cleaned and normalized customer purchase data.
-- Applied **K-Means Clustering** and used the **Elbow Method** to find optimal k.
-- Visualized clusters with Seaborn scatterplots.
-
-**Key Findings:**
-- Found 4 key clusters: “High-Value Loyal”, “Frequent Low Spenders”, “Occasional Buyers”, “Dormant”.
-- Cluster 1 contributed to 45% of total revenue.
-
-**Business Insight:**
-> Recommended targeted retention campaigns for Cluster 1 and cross-selling to Cluster 3.
-
-📊 [Notebook Link](./kmeans_customer_segmentation.ipynb)
+This repository contains my graduate-level marketing analytics project completed in R using **Quarto (.qmd)**.  
+The analysis explores **customer behavior and segmentation** using techniques like **PCA, K-Means, and KNN** to extract business insights from marketing data.
 
 ---
 
-## 🧮 2. Dimensionality Reduction with PCA
-**Goal:** Reduce complexity of customer behavior data and identify key behavioral components.  
+## 🧩 Project Overview
+**Goal:**  
+To analyze customer-level data to identify patterns, reduce dimensionality, and predict marketing outcomes for better targeting strategies.
 
-**Tools:** R / Python (sklearn.decomposition, matplotlib)  
-
-**Methods:**
-- Applied **PCA** to compress 25 features into 5 components.
-- Visualized explained variance ratio.
-- Interpreted top components influencing customer satisfaction.
-
-**Results:**
-- 5 principal components explained **87% of variance**.
-- “Frequency” and “Recency” metrics were strongest predictors of loyalty.
-
-**Business Insight:**
-> Simplified marketing dashboard metrics; improved decision speed for management.
-
-📘 [Notebook Link](./pca_customer_behavior.ipynb)
+**Techniques Used:**
+- 🧮 **Principal Component Analysis (PCA)** — to reduce feature complexity and visualize data structure  
+- 🎯 **K-Means Clustering** — to identify distinct customer groups  
+- 🤖 **K-Nearest Neighbors (KNN)** — to predict customer response or purchase behavior  
 
 ---
 
-## 🤖 3. Predicting Customer Conversion with KNN
-**Goal:** Build a simple predictive model for customer conversion likelihood.  
-
-**Tools:** Python (sklearn, pandas)  
-
-**Methods:**
-- Labeled dataset with binary “Converted / Not Converted”.
-- Split data 80/20 for training and testing.
-- Tuned KNN hyperparameters using GridSearchCV.
-
-**Results:**
-- Accuracy: 82% | Precision: 79% | Recall: 76%.
-- Top features: click_rate, ad_duration, past_purchases.
-
-**Business Insight:**
-> Enabled marketing team to prioritize high-conversion leads and reduce ad spend by ~15%.
-
-📙 [Notebook Link](./knn_conversion_model.ipynb)
+## 🧠 Key Insights
+- PCA reduced the dataset from 15+ variables to a few key behavioral components that explained over **80% of variance**.  
+- K-Means identified **4 distinct customer segments** differing by purchase frequency and engagement level.  
+- KNN achieved an accuracy of **~80%** in predicting customer response.  
+- Results can help tailor **targeted marketing campaigns** and **customer retention strategies**.
 
 ---
 
-## 🧭 Contact
-📧 anniliu5214@email.com  
+## 🛠 Tools & Technologies
+- **Language:** R  
+- **Environment:** Quarto / RStudio  
+- **Libraries:** tidyverse, ggplot2, cluster, caret  
+- **File:** `TeamProject3.qmd`  
+
+---
+
+## 📈 Visualization Examples
+The report includes:
+- PCA scree plots showing explained variance  
+- Cluster visualizations of customer segments  
+- KNN confusion matrix and accuracy metrics  
+
+---
+
+## 💡 Business Takeaways
+- High-value clusters can be prioritized for loyalty programs.  
+- Dormant clusters suggest re-engagement opportunities via personalized campaigns.  
+- Feature reduction (via PCA) improved model interpretability and reduced noise.
+
+---
+
+## 📂 File Structure
+marketing-analytics-portfolio/
+├── README.md
+└── TeamProject3_reversecoding.qmd
+
+
+---
+
+ 
  
