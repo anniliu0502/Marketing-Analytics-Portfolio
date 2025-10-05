@@ -134,23 +134,23 @@ Enhanced Star Earning Mechanics
 
 Reward Catalog Optimization
 
-Align offerings with stated preferences
-Introduce flexible redemption tiers
-Personalized reward recommendations
+- Align offerings with stated preferences
+- Introduce flexible redemption tiers
+- Personalized reward recommendations
 
 
 Engagement Tactics
 
-Improve rewards program visibility and education
-Gamification elements
-Urgency-driven offers
+- Improve rewards program visibility and education
+- Gamification elements
+- Urgency-driven offers
 
 
 Customer Segmentation
 
-Price-sensitive vs. quality-focused cohorts
-Frequency-based targeting
-Customized promotional messaging
+- Price-sensitive vs. quality-focused cohorts
+- Frequency-based targeting
+- Customized promotional messaging
 
 ---
 
