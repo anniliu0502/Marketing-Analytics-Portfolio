@@ -23,6 +23,7 @@ Map the competitive restaurant landscape to:
 
 **Analytical Approach**
 **1. Unfolding Analysis - Model Selection**
+
 Tested four configurations to find optimal representation:
 - Interval Scaling vs Ordinal Scaling
 - Row Conditionality vs Matrix Conditionality
@@ -33,16 +34,18 @@ Optimal Model: Ordinal Scaling with Row Conditionality
 - Validation: Shepard diagram shows excellent fit (points tightly on line)
 
 **2. Tie Handling**
+
 Used ties="secondary" specification for customers with identical ratings (e.g., Customer 4 rated Mildred's and Shoney's both 6.5)
 
 Secondary specification produced lower stress due to additional constraints
 Better handling of ordinal relationships
 
 **3. Stress Decomposition Analysis**
+
 Identified restaurants contributing most/least alignment:
 
-High stress (misaligned): Emiliano's, Leo's 706
-Low stress (well-aligned): Paramount Grill, Shoney's
+- High stress (misaligned): Emiliano's, Leo's 706
+- Low stress (well-aligned): Paramount Grill, Shoney's
 
 ----
 
@@ -229,6 +232,7 @@ Strategic recommendations with implementation roadmap
 ✍️ Author
 Anni Liu
 | Univeristy of Florida | Customer Analysis | Instructor: Dr. Alan Cook | Feburary 2025 
+
 Analytical Leadership: Advanced perceptual mapping, competitive analysis, strategic positioning
 
 _Transforming spatial preference data into actionable competitive strategy_
