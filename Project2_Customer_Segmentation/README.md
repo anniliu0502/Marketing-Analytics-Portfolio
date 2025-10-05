@@ -6,7 +6,11 @@ This project applies PCA (Principal Component Analysis) and hierarchical cluster
 ---
 
 ## 🧠 Objective
-To identify distinct customer segments based on dining preferences, behaviors, and demographics to **guide menu development, service training, pricing strategy, and marketing campaigns for a restaurant business**.
+To identify distinct customer segments based on dining preferences, behaviors, and demographics to : 
+- guide menu development
+- service training
+- pricing strategy
+- marketing campaigns for a restaurant business
 
 ---
 
@@ -36,6 +40,7 @@ Cluster Validation:
 
 ## 🧰 Tools
 **Language**: R
+**Visualization Tool**: Tableau 
 **Libraries**: psych, cluster, factoextra, ggplot2, dplyr
 **Analysis Type**: Factor analysis, hierarchical clustering, silhouette validation
 **Output Format**: PDF report with visualizations
@@ -68,17 +73,18 @@ Cluster Validation:
 Larger party sizes (+0.69), indicating group dining and higher per-visit revenue
 
 **Recommended Strategies:**
-  Position as luxury fine-dining destination
-  VIP membership and loyalty programs
-  Private dining and chef's table experiences
-  Premium wine pairings and exclusive menus
-  Targeted digital marketing through food critics and lifestyle influencers
-  Luxury brand collaborations
+-  Position as luxury fine-dining destination
+-  VIP membership and loyalty programs
+-  Private dining and chef's table experiences
+-  Premium wine pairings and exclusive menus
+-  Targeted digital marketing through food critics and lifestyle influencers
+-  Luxury brand collaborations
 ---
 
 ## 📁 Files
 - `TeamProject2Part1.qmd`, `TeamProject2Part2.qmd` → Full code and analysis  
 - `TeamProject2Part1.html`, `TeamProject2Part2.html` → Rendered interactive report
+- `TeamProject2_6clusters.twb` → Tableau visualization 
 - 'TeamProject2.pdf`→ Full analysis report (19 pages), Statistical outputs and validation tests,  Correlation matrices and dendrograms, and   Cluster profiles and segment descriptions
 
 ---
