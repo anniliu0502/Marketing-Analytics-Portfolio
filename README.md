@@ -168,8 +168,11 @@ The report includes:
 ## 📁 Repository Structure
 
 Project 1: Customer Segmentation (19-page analysis)
+
 Project 2: Perceptual Mapping (19-page analysis)
+
 Full R code and statistical outputs
+
 Comprehensive visualizations and interpretation
 
 
