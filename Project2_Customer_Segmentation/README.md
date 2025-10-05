@@ -39,11 +39,11 @@ Cluster Validation:
 ---
 
 ## 🧰 Tools
-**Language**: R
-**Visualization Tool**: Tableau 
-**Libraries**: psych, cluster, factoextra, ggplot2, dplyr
-**Analysis Type**: Factor analysis, hierarchical clustering, silhouette validation
-**Output Format**: PDF report with visualizations
+- **Language**: R
+- **Visualization Tool**: Tableau 
+- **Libraries**: psych, cluster, factoextra, ggplot2, dplyr
+- **Analysis Type**: Factor analysis, hierarchical clustering, silhouette validation
+- **Output Format**: PDF report with visualizations
 
 ---
 
