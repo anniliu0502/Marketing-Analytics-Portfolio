@@ -53,23 +53,21 @@ Map the competitive restaurant landscape to:
 **Restaurant Clustering**
 - Three natural competitive groups emerged:
 **Premium Tier** (High food quality + location, Dimension 1)
+- Paramount Grill
+- The Top
+- Mildred's
+- Emiliano's
 
-Paramount Grill
-The Top
-Mildred's
-Emiliano's
-
-**Value Tier **(Affordability + parking, Dimension 2)
-
-Carrabbas
-Las Margaritas
-Shoney's
+**Value Tier**(Affordability + parking, Dimension 2)
+- Carrabbas
+- Las Margaritas
+- Shoney's
 
 **Balanced Tier** (Moderate across dimensions)
 
-Beef O'Bradys
-Bistro 1245
-The Swamp
+- Beef O'Bradys
+- Bistro 1245
+- The Swamp
 
 **Ti Amo's Competitive Position**
 Current Strengths:
