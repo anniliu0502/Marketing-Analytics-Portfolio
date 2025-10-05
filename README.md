@@ -161,7 +161,7 @@ The report includes:
 
 ---
 
-## 💡 Business Strategy
+## Business Strategy
 - High-value clusters can be prioritized for loyalty programs.  
 - Dormant clusters suggest re-engagement opportunities via personalized campaigns.  
 - Feature reduction (via PCA) improved model interpretability and reduced noise.
