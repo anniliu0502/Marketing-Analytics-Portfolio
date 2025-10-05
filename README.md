@@ -6,7 +6,7 @@ I'm Anni, a Marketing Analytics graduate passionate about turning data into acti
 Here are selected projects demonstrating my analytical, technical, and strategic skills.
 
 ---
-# 📊 Marketing Analytics Project — Team Project 3 0n Resturants' perceptions, ratings, and customer demographic information. 
+# 📊 Marketing Analytics Project — Team Project 3 on Resturants' perceptions, ratings, and customer demographic information. 
 
 This repository contains my graduate-level marketing analytics project completed in R using **Quarto (.qmd)**.  
 The analysis explores **customer behavior and segmentation** using techniques like **PCA, K-Means, and KNN** to extract business insights from marketing data.
