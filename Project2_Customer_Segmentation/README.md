@@ -85,7 +85,7 @@ Larger party sizes (+0.69), indicating group dining and higher per-visit revenue
 - `TeamProject2Part1.qmd`, `TeamProject2Part2.qmd` → Full code and analysis  
 - `TeamProject2Part1.html`, `TeamProject2Part2.html` → Rendered interactive report
 - `TeamProject2_6clusters.twb` → Tableau visualization 
-- 'TeamProject2.pdf`→ Full analysis report (19 pages), Statistical outputs and validation tests,  Correlation matrices and dendrograms, and   Cluster profiles and segment descriptions
+- 'Team Project2.pdf`→ Full analysis report (19 pages), Statistical outputs and validation tests,  Correlation matrices and dendrograms, and   Cluster profiles and segment descriptions
 
 ---
 ### ✍️ Author
