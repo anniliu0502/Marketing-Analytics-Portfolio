@@ -16,7 +16,7 @@ This project analyzes Starbucks' rewards program effectiveness and identifies op
 
 Starbucks faces increasing competition in the coffee market and needs to maximize the effectiveness of its in-app promotional strategy to drive customer loyalty and visit frequency.
 
-** 5 Representatble Research Questions (Hypothesises) out of the 15 questions in the survey :**
+**5 Representatble Research Questions (Hypothesises) out of the 15 questions in the survey :**
 
 1. How familiar are customers with the Starbucks Rewards system?
 2. What reward redemption options do customers value most?
@@ -73,13 +73,16 @@ Data Analysis
 Tools: Microsoft Excel
 Methods:
 
-Descriptive statistics
-Cross-tabulation analysis
-Satisfaction scoring
-Preference ranking analysis
-Constant-sum importance weighting
+- Descriptive statistics
+- Cross-tabulation analysis
+- Satisfaction scoring
+- Preference ranking analysis
+- Constant-sum importance weighting
 
-
+Statistical Methods:
+- 1 way ANOVA Analysis
+- Chi-Square Analysis
+- T- test Analysis 
 ---
 **Key Findings**
 (To be completed based on survey results)
