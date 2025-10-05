@@ -8,7 +8,7 @@ Here are selected projects demonstrating my analytical, technical, and strategic
 ---
 
 ## 🧩 1. Customer Segmentation using K-Means Clustering
-**Goal:** Identify distinct customer groups to improve targeted marketing campaigns.
+**Goal:** Identify distinct customer groups to improve targeted marketing campaigns/ giving recoomendation to the resturants to improve the business.
 
 **Dataset:** Retail customer transactions (simulated)  
 **Tools:** Python (pandas, sklearn, matplotlib, seaborn)  
