@@ -31,42 +31,42 @@ Starbucks faces increasing competition in the coffee market and needs to maximiz
 Survey Design (15 Questions)
 Demographic & Behavioral Segmentation:
 
-Income source and annual income level
-Current Starbucks visit frequency
-Price sensitivity and willingness to pay
-Coffee brand preferences (ranking)
+- Income source and annual income level
+- Current Starbucks visit frequency
+- Price sensitivity and willingness to pay
+- Coffee brand preferences (ranking)
 
 Rewards Program Evaluation:
 
-Familiarity with Starbucks Rewards (5-point scale)
-Star earning scenario (hypothetical 5x multiplier)
-Reward redemption preferences (200 stars)
-Satisfaction with star collection thresholds (100/150/200 stars)
-Time-sensitive bonus star response (1-7 scale)
+- Familiarity with Starbucks Rewards (5-point scale)
+- Star earning scenario (hypothetical 5x multiplier)
+- Reward redemption preferences (200 stars)
+- Satisfaction with star collection thresholds (100/150/200 stars)
+- Time-sensitive bonus star response (1-7 scale)
 
 Attribute Importance:
 
-Coffee quality factors (constant-sum allocation of 100 points)
+- Coffee quality factors (constant-sum allocation of 100 points)
 
   - Caffeine level, Flavor, Dairy, Price, Sweetness
 
 
 Ordering method preferences (ranking)
-Overall Starbucks attribute satisfaction (semantic differential scale)
+- Overall Starbucks attribute satisfaction (semantic differential scale)
 
-Affordability, Location accessibility, Promotion program quality
+- Affordability, Location accessibility, Promotion program quality
 
 
 
 Promotional Impact:
 
-Likelihood to visit with promotional offers (1-7 scale)
+- Likelihood to visit with promotional offers (1-7 scale)
 
 Data Collection
 
-Target Audience: Starbucks customers and potential customers
-Distribution: Online survey (Qualtrics platform)
-Sampling: Convenience sampling
+- Target Audience: Starbucks customers and potential customers
+- Distribution: Online survey (Qualtrics platform)
+- Sampling: Convenience sampling
 
 Data Analysis
 
@@ -88,35 +88,35 @@ Statistical Methods:
 (To be completed based on survey results)
 Preliminary Analysis Areas:
 
-Rewards Awareness Gap
+- Rewards Awareness Gap
 
-Distribution of familiarity levels with current program
-Correlation between awareness and visit frequency
+- Distribution of familiarity levels with current program
+- Correlation between awareness and visit frequency
 
 
 Optimal Reward Thresholds
 
-Customer satisfaction across different star requirements
-Sweet spot for balancing profitability and satisfaction
+- Customer satisfaction across different star requirements
+- Sweet spot for balancing profitability and satisfaction
 
 
 Redemption Preferences
 
-Most valued reward options (free drinks vs. bakery vs. merchandise)
-Alignment with current reward catalog
+- Most valued reward options (free drinks vs. bakery vs. merchandise)
+- Alignment with current reward catalog
 
 
 Behavioral Impact
 
-Visit frequency increase potential from enhanced rewards
-Time-sensitive offer effectiveness
-Price sensitivity vs. rewards responsiveness
+- Visit frequency increase potential from enhanced rewards
+- Time-sensitive offer effectiveness
+- Price sensitivity vs. rewards responsiveness
 
 
 Competitive Positioning
 
-Starbucks ranking vs. competitors
-Attribute strengths and weaknesses
+- Starbucks ranking vs. competitors
+- Attribute strengths and weaknesses
 
 
 
@@ -127,9 +127,9 @@ Promotion Strategy Optimization Framework:
 
 Enhanced Star Earning Mechanics
 
-Tiered earning rates based on customer segments
-Time-limited bonus multipliers
-Category-specific accelerators
+- Tiered earning rates based on customer segments
+- Time-limited bonus multipliers
+- Category-specific accelerators
 
 
 Reward Catalog Optimization
