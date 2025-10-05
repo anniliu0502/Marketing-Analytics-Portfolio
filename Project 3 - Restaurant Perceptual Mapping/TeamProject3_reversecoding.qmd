@@ -1,0 +1,499 @@
+---
+title: "TeamProject3_test"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+**Load data**
+
+```{r}
+# Step 1: Load packages and set the seed.
+library(smacof)
+set.seed(1)
+# Load required libraries
+library(FactoMineR)
+library(factoextra)
+library(ggplot2)
+library(ggplot2)
+library(gridExtra)
+library(tidyverse)
+library(plotrix)
+library(colorspace)
+library(e1071)
+library(viridisLite)
+# Read perception data
+res_percep_data <- read.csv("C:/Users/liua8/Desktop/customer analysis/TP3_RestPercep.csv", header = TRUE)
+row.names(res_percep_data) <- res_percep_data$Restaurant
+res_percep_data <- res_percep_data[, -which(names(res_percep_data) == "Restaurant")]
+# Read preference data
+preference_data <- read.csv("C:/Users/liua8/Desktop/customer analysis/TP3_Prefs.csv", header = TRUE)
+# Read customer demographic data
+customer_data <- read.csv("C:/Users/liua8/Desktop/customer analysis/TP3_CustData.csv", header = TRUE)
+
+```
+
+**Reverse Code**
+
+```{r}
+# Convert the data to matrices
+res_percep_matrix <- as.matrix(res_percep_data)  # Assuming the first column is an identifier
+preference_matrix <- as.matrix(preference_data)
+
+# Reverse code the data using sim2diss
+res_reverse_matrix <- sim2diss(res_percep_matrix, method = "reverse")
+res_reverse_matrix
+#Reverse code the preference data
+preference_matrix <- as.matrix(preference_data)
+pref_reverse_matrix <- sim2diss(preference_matrix, method = "reverse")
+ 
+pref_reverse_matrix
+```
+
+**Interval Unfolding Model**
+
+```{r}
+# Perform unfolding analysis
+restuarant_pref <- unfolding(pref_reverse_matrix, type="interval")
+
+# Print the result
+print(restuarant_pref)
+
+# Summary of the result
+summary(restuarant_pref)
+
+# Plot the result with corrected syntax
+plot(restuarant_pref, col.rows=c("red", "blue"), pch=19, cex=2)
+
+# Stress plot
+plot(restuarant_pref, "stressplot")
+
+# Shepard plot
+plot(restuarant_pref, "Shepard")
+```
+
+**2D Interval Row-Conditional Unfolding Model**
+
+```{r}
+un_res.row <- unfolding(pref_reverse_matrix, type="interval", conditionality="row")
+un_res.row
+summary(un_res.row)
+plot(un_res.row, col.rows=c("red","blue"), pch=19, cex=2)
+plot(un_res.row, "stressplot")
+plot(un_res.row, "Shepard")
+```
+
+**2D Interval Matrix-Conditional Unfolding Model**
+
+```{r}
+un_res.row <- unfolding(pref_reverse_matrix, type="interval", conditionality="matrix")
+un_res.row
+summary(un_res.row)
+plot(un_res.row, col.rows=c("red","blue"), pch=19, cex=2)
+plot(un_res.row, "stressplot")
+plot(un_res.row, "Shepard")
+```
+
+**2D Ordinal Unfolding Model**
+
+```{r}
+un_res.ord <- unfolding(pref_reverse_matrix, type="ordinal")
+un_res.ord
+summary(un_res.ord)
+plot(un_res.ord, col.rows=c("red","blue"), pch=19, cex=2)
+plot(un_res.ord, "stressplot")
+plot(un_res.ord, "Shepard")
+```
+
+**2D Ordinal Row-Conditional Unfolding Model**
+
+```{r}
+un_res.ordrow <- unfolding(pref_reverse_matrix, type="ordinal", conditionality="row")
+un_res.ordrow
+summary(un_res.ordrow)
+plot(un_res.ordrow, col.rows=c("red","blue"), pch=19, cex=2)
+plot(un_res.ordrow, "stressplot")
+plot(un_res.ordrow, "Shepard")
+```
+
+**2D Ordinal Matrix-Conditional Unfolding Model**
+
+```{r}
+un_res.ordrow <- unfolding(pref_reverse_matrix, type="ordinal", ties="secondary" ,conditionality="matrix")
+un_res.ordrow
+summary(un_res.ordrow)
+plot(un_res.ordrow, col.rows=c("red","blue"), pch=19, cex=2)
+plot(un_res.ordrow, "stressplot")
+plot(un_res.ordrow, "Shepard")
+```
+
+**Restaurants Preference Based on MDS**
+
+```{r}
+# Perform MDS on the reversed res_reversed_data
+mds_res <- mds(res_reverse_matrix, ndim = 2)
+mds_pref <- mds(pref_reverse_matrix, ndim = 2)
+res_mds_df <- data.frame(mds_res$conf, Type = "Restaurant", Label = rownames(res_percep_data))
+colnames(res_mds_df) <- c("X1", "X2", "Type", "Label")
+
+pref_mds_df <- data.frame(mds_pref$conf, Type = "Customer", Label = rownames(preference_data))
+colnames(pref_mds_df) <- c("X1", "X2", "Type", "Label")
+
+# Combine the data frames
+combined_df <- rbind(res_mds_df, pref_mds_df)
+combined_df
+```
+
+```{r}
+ # Plot the combined preference map
+ggplot(combined_df, aes(X1, X2, color = Type, label = Label)) +
+  geom_point() +
+  geom_text(vjust = -0.5) +
+  ggtitle('Combined Preference Map for Restaurants and Customers') +
+  xlab('Dimension 1') +
+  ylab('Dimension 2') +
+  theme_minimal()
+```
+
+**Gender on Preference Map using MDS**
+
+```{r}
+# Create DataFrames
+res_mds_df <- data.frame(mds_res$conf, Type = "Restaurant", Label = rownames(res_percep_data))
+colnames(res_mds_df) <- c("X1", "X2", "Type", "Label")
+
+pref_mds_df <- data.frame(mds_pref$conf, Type = "Customer", Label = rownames(customer_data))
+colnames(pref_mds_df) <- c("X1", "X2", "Type", "Label")
+
+# Convert Label to numeric for merging
+pref_mds_df$Label <- as.numeric(pref_mds_df$Label)
+# Ensure pref_mds_df has only the necessary columns before merging
+pref_mds_df <- pref_mds_df %>% select(X1, X2, Type, Label)
+# Merge customer demographics into preference data
+pref_mds_df <- left_join(pref_mds_df, customer_data, by = c("Label" = "Subject"))
+
+# Convert Label back to character for plotting
+pref_mds_df$Label <- as.character(pref_mds_df$Label)
+
+# Ensure pref_mds_df has only the necessary columns before merging
+pref_mds_df <- pref_mds_df %>% select(X1, X2, Type, Label, Gender)  # Keep Gender for coloring
+
+# Add Gender column to res_mds_df with NA (since restaurants don't have gender)
+res_mds_df$Gender <- NA
+
+# Combine both data frames
+combined_df <- rbind(res_mds_df, pref_mds_df)
+# Combine both datasets
+combined_df <- rbind(res_mds_df, pref_mds_df)
+
+# Plot with demographic information (color-coded by Gender)
+ggplot(combined_df, aes(X1, X2, shape = Type, label = Label)) +
+  geom_point(aes(size = ifelse(Type == "Customer", 3, 5), color = ifelse(Type == "Customer", Gender, "Restaurant"))) +
+  geom_text(vjust = -0.5) +
+  ggtitle("Combined Preference Map with Customer Demographics") +
+  xlab("Dimension 1") +
+  ylab("Dimension 2") +
+  theme_minimal() +
+  scale_color_manual(values = c("Male" = "blue", "Female" = "pink", "Restaurant" = "red")) +
+  guides(size = "none")  # Remove size legend for simplicity
+```
+
+**Age on Preference Map using MDS**
+
+```{r}
+# Create DataFrames for plotting
+res_mds_df <- data.frame(mds_res$conf, Type = "Restaurant", Label = rownames(res_percep_data))
+colnames(res_mds_df) <- c("X1", "X2", "Type", "Label")
+
+pref_mds_df <- data.frame(mds_pref$conf, Type = "Customer", Label = rownames(customer_data))
+colnames(pref_mds_df) <- c("X1", "X2", "Type", "Label")
+
+# Convert Label to numeric for merging
+pref_mds_df$Label <- as.numeric(pref_mds_df$Label)
+
+# Merge customer age into preference data
+pref_mds_df <- left_join(pref_mds_df, customer_data %>% select(Subject, Age), by = c("Label" = "Subject"))
+
+# Convert Label back to character for plotting
+pref_mds_df$Label <- as.character(pref_mds_df$Label)
+
+# Add Age column to res_mds_df with NA (since restaurants don't have Age)
+res_mds_df$Age <- NA
+
+# Combine both datasets
+combined_df <- rbind(res_mds_df, pref_mds_df)
+
+# Plot with age representation (e.g., color gradient based on Age)
+ggplot(combined_df, aes(X1, X2, shape = Type, label = Label)) +
+  geom_point(aes(size = ifelse(Type == "Customer", 3, 5), color = ifelse(Type == "Customer", Age, NA))) +
+  geom_text(vjust = -0.5) +
+  ggtitle("Combined Preference Map with Customer Age") +
+  xlab("Dimension 1") +
+  ylab("Dimension 2") +
+  theme_minimal() +
+  scale_color_gradient(low = "yellow", high = "red", na.value = "green") +  # Color customers by Age
+  guides(size = "none")  # Remove size legend for simplicity
+```
+
+**Income** **on Preference Map using MDS**
+
+```{r}
+# Load required libraries
+ 
+library(ggrepel)
+ 
+# Create DataFrames for plotting
+res_mds_df <- data.frame(mds_res$conf, Type = "Restaurant", Label = rownames(res_percep_data))
+colnames(res_mds_df) <- c("X1", "X2", "Type", "Label")
+
+pref_mds_df <- data.frame(mds_pref$conf, Type = "Customer", Label = rownames(customer_data))
+colnames(pref_mds_df) <- c("X1", "X2", "Type", "Label")
+
+# Convert Label to numeric for merging
+pref_mds_df$Label <- as.numeric(pref_mds_df$Label)
+
+# Merge customer income into preference data
+pref_mds_df <- left_join(pref_mds_df, customer_data %>% select(Subject, Income), 
+                         by = c("Label" = "Subject"))
+
+# Convert Label back to character for plotting
+pref_mds_df$Label <- as.character(pref_mds_df$Label)
+
+# Add Income column to res_mds_df with NA
+res_mds_df$Income <- NA
+
+# Combine both datasets
+combined_df <- rbind(res_mds_df, pref_mds_df)
+
+# Convert Income to a factor for better color mapping
+combined_df$Income <- as.factor(combined_df$Income)
+
+# Create a sufficient number of colors using color brewer
+num_levels <- length(unique(combined_df$Income))
+custom_colors <- colorRampPalette(c(
+    "#FF1E1E", "#FF8C00", "#FFD700", "#32CD32", 
+    "#1E90FF", "#9370DB", "#FF69B4", "#00CED1",
+    "#FF4500", "#7B68EE", "#20B2AA", "#E0F7FF",
+    "#FFF9E3", "#800020", "#3CB371", "#BA55D3",
+    "#C3B091", "#6495ED", "#98FB98", "#DDA0DD"
+))(num_levels)
+
+# Enhanced ggplot with more visual elements
+ggplot(combined_df, aes(X1, X2, shape = Type, label = Label)) +
+  # Add a subtle grid background
+  geom_vline(xintercept = seq(-1, 1, 0.5), color = "gray90", linewidth = 0.1) +
+  geom_hline(yintercept = seq(-1, 1, 0.5), color = "gray90", linewidth = 0.1) +
+  
+  # Add points with enhanced aesthetics
+  geom_point(aes(color = Income), size = ifelse(combined_df$Type == "Restaurant", 4, 3), alpha = 0.8) +
+  
+  # Add labels with improved positioning
+  geom_text_repel(
+    data = combined_df,
+    aes(label = Label),
+    size = 3.5,
+    box.padding = 0.5,
+    point.padding = 0.3,
+    force = 5,
+    segment.color = "gray50",
+    segment.alpha = 0.5,
+    max.overlaps = Inf
+  ) +
+  
+  # Customize the appearance
+  scale_color_manual(values = c(custom_colors), na.value = "#2F4F4F") +
+  scale_shape_manual(values = c(Customer = 16, Restaurant = 17)) +
+  
+  # Enhance the theme
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", margin = margin(b = 20)),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.grid.major = element_line(color = "gray95"),
+    panel.grid.minor = element_blank(),
+    legend.position = "right",
+    legend.box = "vertical",
+    legend.title = element_text(face = "bold"),
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "gray30")
+  ) +
+  
+  # Add titles and labels
+  labs(
+    title = "Restaurant Preference Map with Customer Income",
+    x = "Dimension 1",
+    y = "Dimension 2",
+    color = "Income Level",
+    shape = "Type"
+  ) +
+  
+  # Set plot boundaries
+  coord_cartesian(xlim = c(-1, 1), ylim = c(-0.8, 0.8))
+```
+
+**Race** **on Preference Map using MDS**
+
+```{r}
+# Create DataFrames for plotting
+res_mds_df <- data.frame(mds_res$conf, Type = "Restaurant", Label = rownames(res_percep_data))
+colnames(res_mds_df) <- c("X1", "X2", "Type", "Label")
+
+pref_mds_df <- data.frame(mds_pref$conf, Type = "Customer", Label = rownames(customer_data))
+colnames(pref_mds_df) <- c("X1", "X2", "Type", "Label")
+
+# Convert Label to numeric for merging
+pref_mds_df$Label <- as.numeric(pref_mds_df$Label)
+
+# Merge customer race into preference data
+pref_mds_df <- left_join(pref_mds_df, customer_data %>% select(Subject, Race), by = c("Label" = "Subject"))
+
+# Convert Label back to character for plotting
+pref_mds_df$Label <- as.character(pref_mds_df$Label)
+
+# Add Race column to res_mds_df with NA (since restaurants don't have Race)
+res_mds_df$Race <- NA
+
+# Combine both datasets
+combined_df <- rbind(res_mds_df, pref_mds_df)
+
+# Convert Race to a factor (categorical)
+combined_df$Race <- as.factor(combined_df$Race)
+
+ggplot(combined_df, aes(X1, X2, shape = Type, label = Label)) +
+  geom_point(aes(size = 3, color = Race), alpha = 0.7) +  
+  geom_text(vjust = -0.7, size = 4) +  
+  ggtitle("Combined Preference Map with Customer Race") +
+  xlab("Dimension 1") +
+  ylab("Dimension 2") +
+  theme_minimal() +
+  scale_color_brewer(palette = "Set1", na.value = "gray") +  # Use a categorical color scale
+  scale_size_continuous(range = c(3, 3)) +  # Fixed size for all points
+  guides(color = guide_legend(title = "Race"), size = "none")  # Use legend
+```
+
+**Number of Children** **on Preference Map using MDS**
+
+```{r}
+# Create DataFrames for plotting with consistent columns
+res_mds_df <- data.frame(mds_res$conf, Type = "Restaurant", Label = rownames(res_percep_data))
+colnames(res_mds_df) <- c("X1", "X2", "Type", "Label")
+
+pref_mds_df <- data.frame(mds_pref$conf, Type = "Customer", Label = rownames(customer_data))
+colnames(pref_mds_df) <- c("X1", "X2", "Type", "Label")
+
+# Convert Label to integer in pref_mds_df to match Subject type in customer_data
+pref_mds_df$Label <- as.integer(pref_mds_df$Label)
+
+# Perform the join with integer types
+pref_mds_df <- left_join(pref_mds_df, customer_data %>% 
+                         select(Subject, NumofChildren), 
+                         by = c("Label" = "Subject"))
+
+# Convert Label back to character for consistency with res_mds_df
+pref_mds_df$Label <- as.character(pref_mds_df$Label)
+
+# Add NumChildren to restaurant data (all zeros)
+res_mds_df$NumChildren <- 0
+
+# Ensure column names match exactly
+names(pref_mds_df)[names(pref_mds_df) == "NumofChildren"] <- "NumChildren"
+
+# Now combine the data frames
+combined_df <- rbind(res_mds_df, pref_mds_df)
+
+# Create the plot with color indicating number of children
+ggplot(combined_df, aes(X1, X2, shape = Type, label = Label)) +
+  geom_point(aes(size = 3, color = NumChildren), alpha = 0.7) +
+  geom_text(vjust = -0.7, size = 4) +
+  ggtitle("Combined Preference Map with Number of Children") +
+  xlab("Dimension 1") +
+  ylab("Dimension 2") +
+  theme_minimal() +
+  scale_shape_manual(values = c("Customer" = 16, "Restaurant" = 17)) + # Different shapes for Customer/Restaurant
+  scale_color_gradient(low = "lightblue", high = "darkred") + # Color gradient for number of children
+  scale_size_continuous(range = c(3, 3)) + # Fixed size for all points
+  guides(color = guide_colorbar(title = "Number of Children"),
+         size = "none") # Remove size legend since we're using fixed size
+```
+
+**Perform PCA and Preference Map based on PCA**
+
+```{r}
+# Load required libraries
+library(cluster)  # For sim2diss function
+
+# Function to read and prepare perception data
+prepare_perception_data <- function() {
+  # Create perception data
+  perception_data <- data.frame(
+    Restaurant = c("Bistro 1245", "The Swamp", "Carrabbas", "Las Margaritas", 
+                  "Beef O'Bradys", "Mildred's", "The Top", "Paramount Grill",
+                  "Shoney's", "Ti Amo", "Emiliano's", "Leo's 706"),
+    Location = c(5,2,2,6,4,7,5,6,6,5,4,4),
+    Food = c(4,1,3,4,2,7,6,7,1,6,6,5),
+    Price = c(4,7,5,6,7,1,3,1,7,1,2,3),
+    Atmosphere = c(5,3,4,5,2,6,5,6,2,3,7,4),
+    Seating = c(1,2,7,5,2,4,1,1,6,7,4,4),
+    Libations = c(1,2,7,2,7,2,7,5,6,7,3,3),
+    Parking = c(6,1,5,2,5,2,5,6,7,3,3,3)
+  )
+  
+  # Reverse code the perception data (assuming a 1-7 scale, subtract from 8)
+  perception_data[,-1] <- 8 - perception_data[,-1]
+  
+  # Set restaurant names as row names and remove Restaurant column
+  row.names(perception_data) <- perception_data$Restaurant
+  perception_data <- perception_data[, -1]
+  
+  return(perception_data)
+}
+
+# Function to read and prepare preference data
+prepare_preference_data <- function() {
+  # Read preference data from CSV file
+  preferences <- preference_data
+  
+  # Set column names based on the first row
+  restaurants <- c("Paramount", "TheTop", "Bistro1245", "TheSwamp", "Mildreds",
+                   "Emilianos", "Leos706", "BeefOBradys", "TiAmo", "Carrabbas",
+                   "LasMargaritas", "Shoneys")
+  colnames(preferences) <- restaurants
+  
+  # Convert similarity to dissimilarity using sim2diss with correct method
+  preferences_diss <- sim2diss(as.matrix(preferences), method = "reverse")
+  
+  return(preferences_diss)
+}
+
+# Perform PCA and create preference map
+create_preference_map <- function() {
+  # Prepare data
+  perception_data <- prepare_perception_data()
+  preference_data <- prepare_preference_data()
+  
+  # Perform PCA on perception data
+  pca_result <- PCA(perception_data, scale.unit = TRUE, graph = TRUE)
+  
+  # Create preference map
+  pref_map <- fviz_pca_biplot(pca_result,
+                              label = "all",         # Show all labels
+                              repel = TRUE,          # Avoid label overlap
+                              title = "Restaurant Preference Map",
+                              col.var = "red",       # Variables color
+                              col.ind = "blue",      # Individuals color
+                              legend.title = "Type") +
+    theme_minimal()
+  
+  return(pref_map)
+}
+
+# Execute the analysis
+preference_map <- create_preference_map()
+print(preference_map)
+
+```

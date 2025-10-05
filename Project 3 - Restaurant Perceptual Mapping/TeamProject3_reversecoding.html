@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>TeamProject3_test</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="TeamProject3_reversecoding_files/libs/clipboard/clipboard.min.js"></script>
+<script src="TeamProject3_reversecoding_files/libs/quarto-html/quarto.js"></script>
+<script src="TeamProject3_reversecoding_files/libs/quarto-html/popper.min.js"></script>
+<script src="TeamProject3_reversecoding_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="TeamProject3_reversecoding_files/libs/quarto-html/anchor.min.js"></script>
+<link href="TeamProject3_reversecoding_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="TeamProject3_reversecoding_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="TeamProject3_reversecoding_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="TeamProject3_reversecoding_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="TeamProject3_reversecoding_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TeamProject3_test</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+</section>
+<section id="running-code" class="level2">
+<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
+<p><strong>Load data</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Load packages and set the seed.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(smacof)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'smacof' was built under R version 4.4.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: plotrix</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: colorspace</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: e1071</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'e1071' was built under R version 4.4.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'smacof'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:base':
+
+    transform</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required libraries</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(FactoMineR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'FactoMineR' was built under R version 4.4.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(factoextra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'factoextra' was built under R version 4.4.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'gridExtra' was built under R version 4.4.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.4.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.3     ✔ tibble    3.2.1
+✔ purrr     1.0.2     ✔ tidyr     1.3.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::combine() masks gridExtra::combine()
+✖ dplyr::filter()  masks stats::filter()
+✖ dplyr::lag()     masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotrix)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(colorspace)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(e1071)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridisLite)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Read perception data</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>res_percep_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/liua8/Desktop/customer analysis/TP3_RestPercep.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(res_percep_data) <span class="ot">&lt;-</span> res_percep_data<span class="sc">$</span>Restaurant</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>res_percep_data <span class="ot">&lt;-</span> res_percep_data[, <span class="sc">-</span><span class="fu">which</span>(<span class="fu">names</span>(res_percep_data) <span class="sc">==</span> <span class="st">"Restaurant"</span>)]</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Read preference data</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>preference_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/liua8/Desktop/customer analysis/TP3_Prefs.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Read customer demographic data</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>customer_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/liua8/Desktop/customer analysis/TP3_CustData.csv"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Reverse Code</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the data to matrices</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>res_percep_matrix <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(res_percep_data)  <span class="co"># Assuming the first column is an identifier</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>preference_matrix <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(preference_data)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Reverse code the data using sim2diss</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>res_reverse_matrix <span class="ot">&lt;-</span> <span class="fu">sim2diss</span>(res_percep_matrix, <span class="at">method =</span> <span class="st">"reverse"</span>)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>res_reverse_matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                Location Food Price Atmosphere Seating Libations Parking
+Bistro 1245            3    4     4          3       7         7       2
+The Swamp              6    7     1          5       6         6       7
+Carrabbas              6    5     3          4       1         1       3
+Las Margaritas         2    4     2          3       3         6       6
+Beef O'Bradys          4    6     1          6       6         1       3
+Mildred's              1    1     7          2       4         6       6
+The Top                3    2     5          3       7         1       3
+Paramount Grill        2    1     7          2       7         3       2
+Shoney's               2    7     1          6       2         2       1
+Ti Amo                 3    2     7          5       1         1       5
+Emiliano's             4    2     6          1       4         5       5
+Leo's 706              4    3     5          4       4         5       5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Reverse code the preference data</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>preference_matrix <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(preference_data)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>pref_reverse_matrix <span class="ot">&lt;-</span> <span class="fu">sim2diss</span>(preference_matrix, <span class="at">method =</span> <span class="st">"reverse"</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>pref_reverse_matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Paramount TheTop Bistro1245 TheSwamp Mildreds Emilianos Leos706
+ [1,]         1    2.0          3        7      5.0         6       4
+ [2,]         1    2.0          6        7      4.0         5       3
+ [3,]         2    3.0          4        7      6.0         5       3
+ [4,]        12   10.0         11        9      6.5         3       4
+ [5,]         1    2.0          5        7      4.0         6       3
+ [6,]         8    3.5          3        2     10.0         7       5
+ [7,]        12   11.0         10        8      9.0         7       5
+ [8,]        12    9.0          8        6     11.0         7       5
+ [9,]        12   10.0         11        9      8.0         6       5
+[10,]        12   11.0         10        6      9.0         7       5
+[11,]         3    1.0          2        4      7.0         6       5
+[12,]        11    7.0          6        2     10.0         9       4
+[13,]         5    1.0          2        6      7.0         4       3
+[14,]        12   11.0         10        9      8.0         7       4
+[15,]         2    1.0          3        7      6.0         4       5
+[16,]         3    4.0          6       10      2.0         1       5
+[17,]         1    4.0          6        9      2.0         3       5
+[18,]        12   11.0         10        8      9.0         7       4
+[19,]        12   11.0         10        6      9.0         7       5
+[20,]         7    8.0         11       12      2.0         3       5
+[21,]        12   11.0          9        6     10.0         7       4
+[22,]         9   11.0         12       10      5.0         4       7
+[23,]         2    5.0          7       10      1.0         3       4
+[24,]         8    3.0          1        2     10.0         5       7
+[25,]        11    5.0          2        3      8.5         1       7
+[26,]         6    2.0          1        3      9.0         5       7
+[27,]         1    2.0          5        7      3.0         4       6
+[28,]         4    2.0          6        7      5.0         3       1
+[29,]        12   11.0         10        9      8.0         7       5
+[30,]         6    4.0          9       11      3.0         1       2
+      BeefOBradys TiAmo Carrabbas LasMargaritas Shoneys
+ [1,]         8.0  10.0      11.0             9    12.0
+ [2,]        10.0   9.0      11.0             8    12.0
+ [3,]         9.0  10.5      10.5             8    12.0
+ [4,]         8.0   5.0       1.0             2     6.5
+ [5,]         9.0  10.0      11.0             8    12.0
+ [6,]         3.5  12.0      11.0             6     9.0
+ [7,]         4.0   6.0       2.0             3     1.0
+ [8,]         3.0  10.0       4.0             1     2.0
+ [9,]         7.0   4.0       1.0             2     3.0
+[10,]         4.0   8.0       3.0             2     1.0
+[11,]         8.0  11.0      10.0             9    12.0
+[12,]         1.0  12.0       8.0             3     5.0
+[13,]         8.0  11.0      10.0             9    12.0
+[14,]         6.0   5.0       1.0             3     2.0
+[15,]         8.0  11.0      10.0             9    12.0
+[16,]        11.0   7.0       9.0             8    12.0
+[17,]        11.0   7.0      10.0             8    12.0
+[18,]         5.0   6.0       2.0             3     1.0
+[19,]         4.0   8.0       3.0             2     1.0
+[20,]        10.0   1.0       4.0             6     9.0
+[21,]         5.0   8.0       3.0             2     1.0
+[22,]         8.0   1.0       2.0             3     6.0
+[23,]        11.0   6.0       8.0             9    12.0
+[24,]         4.0  12.0      11.0             6     9.0
+[25,]         4.0  12.0       8.5             6    10.0
+[26,]         4.0  12.0      11.0             8    10.0
+[27,]        10.0   8.0      11.0             9    12.0
+[28,]         9.0  12.0      10.0             8    11.0
+[29,]         6.0   4.0       1.0             3     2.0
+[30,]        10.0   8.0       7.0             5    12.0</code></pre>
+</div>
+</div>
+<p><strong>Interval Unfolding Model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform unfolding analysis</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>restuarant_pref <span class="ot">&lt;-</span> <span class="fu">unfolding</span>(pref_reverse_matrix, <span class="at">type=</span><span class="st">"interval"</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the result</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(restuarant_pref)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call: unfolding(delta = pref_reverse_matrix, type = "interval")
+
+Model:               Rectangular smacof 
+Number of subjects:  30 
+Number of objects:   12 
+Transformation:      interval 
+Conditionality:      matrix 
+
+Stress-1 value:    0.164483 
+Penalized Stress:  0.00111 
+Number of iterations: 1632 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary of the result</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(restuarant_pref)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Subject configuration (rows):
+           D1      D2
+ [1,] -0.6318  0.0555
+ [2,] -0.6154  0.2677
+ [3,] -0.6332  0.0665
+ [4,]  0.5477  0.2767
+ [5,] -0.6079  0.1317
+ [6,] -0.3083 -0.6474
+ [7,]  0.7200 -0.0371
+ [8,]  0.6172 -0.2847
+ [9,]  0.7085  0.1217
+[10,]  0.7018 -0.1173
+[11,] -0.6788 -0.2952
+[12,]  0.2101 -0.6632
+[13,] -0.6493 -0.2494
+[14,]  0.7115  0.0631
+[15,] -0.6691  0.0185
+[16,] -0.5436  0.4485
+[17,] -0.5586  0.4298
+[18,]  0.7128 -0.0116
+[19,]  0.7018 -0.1173
+[20,]  0.1021  0.7230
+[21,]  0.6935 -0.1129
+[22,]  0.5146  0.5211
+[23,] -0.4912  0.4959
+[24,] -0.3436 -0.6331
+[25,] -0.2594 -0.6003
+[26,] -0.4490 -0.5713
+[27,] -0.6615  0.2626
+[28,] -0.6205  0.1085
+[29,]  0.7207  0.0855
+[30,] -0.2866  0.4754
+
+Object configuration (columns):
+                   D1      D2
+Paramount     -0.8202  0.2749
+TheTop        -0.7070 -0.0731
+Bistro1245    -0.5493 -0.5290
+TheSwamp      -0.1296 -0.7256
+Mildreds      -0.3644  0.5817
+Emilianos     -0.4134  0.1883
+Leos706       -0.0492  0.1023
+BeefOBradys    0.3559 -0.6428
+TiAmo          0.4668  0.8592
+Carrabbas      0.7403  0.1198
+LasMargaritas  0.5612 -0.0233
+Shoneys        0.9088 -0.1325
+
+
+Stress per point rows:
+         SPP SPP(%)
+ [1,] 1.4798 1.4798
+ [2,] 1.4969 1.4969
+ [3,] 1.5985 1.5985
+ [4,] 1.6304 1.6304
+ [5,] 1.8042 1.8042
+ [6,] 1.9439 1.9439
+ [7,] 1.9439 1.9439
+ [8,] 1.9719 1.9719
+ [9,] 1.9914 1.9914
+[10,] 2.0994 2.0994
+[11,] 2.1271 2.1271
+[12,] 2.1895 2.1895
+[13,] 2.2001 2.2001
+[14,] 2.3662 2.3662
+[15,] 2.4041 2.4041
+[16,] 2.5067 2.5067
+[17,] 2.8358 2.8358
+[18,] 3.0818 3.0818
+[19,] 3.5971 3.5971
+[20,] 3.6301 3.6301
+[21,] 3.6394 3.6394
+[22,] 3.8467 3.8467
+[23,] 4.5963 4.5963
+[24,] 4.9042 4.9042
+[25,] 4.9739 4.9739
+[26,] 5.0000 5.0000
+[27,] 5.6166 5.6166
+[28,] 6.6199 6.6199
+[29,] 6.7633 6.7633
+[30,] 9.1411 9.1411
+
+Stress per point columns:
+         SPP SPP(%)
+ [1,] 1.4798 1.4798
+ [2,] 1.4969 1.4969
+ [3,] 1.5985 1.5985
+ [4,] 1.6304 1.6304
+ [5,] 1.8042 1.8042
+ [6,] 1.9439 1.9439
+ [7,] 1.9439 1.9439
+ [8,] 1.9719 1.9719
+ [9,] 1.9914 1.9914
+[10,] 2.0994 2.0994
+[11,] 2.1271 2.1271
+[12,] 2.1895 2.1895
+[13,] 2.2001 2.2001
+[14,] 2.3662 2.3662
+[15,] 2.4041 2.4041
+[16,] 2.5067 2.5067
+[17,] 2.8358 2.8358
+[18,] 3.0818 3.0818
+[19,] 3.5971 3.5971
+[20,] 3.6301 3.6301
+[21,] 3.6394 3.6394
+[22,] 3.8467 3.8467
+[23,] 4.5963 4.5963
+[24,] 4.9042 4.9042
+[25,] 4.9739 4.9739
+[26,] 5.0000 5.0000
+[27,] 5.6166 5.6166
+[28,] 6.6199 6.6199
+[29,] 6.7633 6.7633
+[30,] 9.1411 9.1411</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the result with corrected syntax</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(restuarant_pref, <span class="at">col.rows=</span><span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stress plot</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(restuarant_pref, <span class="st">"stressplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Shepard plot</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(restuarant_pref, <span class="st">"Shepard"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>2D Interval Row-Conditional Unfolding Model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>un_res.row <span class="ot">&lt;-</span> <span class="fu">unfolding</span>(pref_reverse_matrix, <span class="at">type=</span><span class="st">"interval"</span>, <span class="at">conditionality=</span><span class="st">"row"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in unfolding(pref_reverse_matrix, type = "interval", conditionality =
+"row"): Iteration limit reached! Increase itmax argument!</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>un_res.row</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call: unfolding(delta = pref_reverse_matrix, type = "interval", conditionality = "row")
+
+Model:               Rectangular smacof 
+Number of subjects:  30 
+Number of objects:   12 
+Transformation:      interval 
+Conditionality:      row 
+
+Stress-1 value:    0.087094 
+Penalized Stress:  0.519606 
+Number of iterations: 10000 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(un_res.row)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Subject configuration (rows):
+           D1      D2
+ [1,] -0.8593  0.0073
+ [2,] -0.6500  0.1761
+ [3,] -0.5746  0.0314
+ [4,]  0.4032  0.2606
+ [5,] -0.6809  0.1108
+ [6,] -0.2363 -0.5397
+ [7,]  0.8815 -0.0560
+ [8,]  0.5248 -0.3181
+ [9,]  0.7738  0.2254
+[10,]  0.7032 -0.2058
+[11,] -0.8297 -0.2988
+[12,]  0.1871 -0.5213
+[13,] -0.4891 -0.1442
+[14,]  0.8225  0.1382
+[15,] -0.7260 -0.0457
+[16,] -0.4705  0.3947
+[17,] -0.6872  0.4823
+[18,]  0.8360 -0.0266
+[19,]  0.7032 -0.2058
+[20,]  0.1041  0.8321
+[21,]  0.6701 -0.1946
+[22,]  0.5433  0.6065
+[23,] -0.5738  0.6137
+[24,] -0.3272 -0.5676
+[25,] -0.1297 -0.3043
+[26,] -0.4591 -0.5219
+[27,] -0.7339  0.2327
+[28,] -0.3735  0.0264
+[29,]  0.9494  0.2073
+[30,] -0.2107  0.2854
+
+Object configuration (columns):
+                   D1      D2
+Paramount     -0.8762  0.2539
+TheTop        -0.6849 -0.1889
+Bistro1245    -0.5745 -0.5022
+TheSwamp      -0.1031 -0.7216
+Mildreds      -0.3004  0.6383
+Emilianos     -0.1200  0.2758
+Leos706       -0.0151  0.0837
+BeefOBradys    0.2918 -0.6385
+TiAmo          0.4003  0.8226
+Carrabbas      0.6754  0.2799
+LasMargaritas  0.4399 -0.0457
+Shoneys        0.8668 -0.2572
+
+
+Stress per point rows:
+          SPP  SPP(%)
+ [1,]  1.4185  1.4185
+ [2,]  1.6878  1.6878
+ [3,]  1.7060  1.7060
+ [4,]  1.7234  1.7234
+ [5,]  1.7234  1.7234
+ [6,]  1.8478  1.8478
+ [7,]  1.9134  1.9134
+ [8,]  2.0259  2.0259
+ [9,]  2.2155  2.2155
+[10,]  2.2264  2.2264
+[11,]  2.2798  2.2798
+[12,]  2.3432  2.3432
+[13,]  2.4218  2.4218
+[14,]  2.8455  2.8455
+[15,]  2.8645  2.8645
+[16,]  2.9340  2.9340
+[17,]  3.0718  3.0718
+[18,]  3.1020  3.1020
+[19,]  3.4459  3.4459
+[20,]  3.4647  3.4647
+[21,]  3.7958  3.7958
+[22,]  3.8358  3.8358
+[23,]  3.9954  3.9954
+[24,]  4.3046  4.3046
+[25,]  4.6409  4.6409
+[26,]  4.7551  4.7551
+[27,]  4.8939  4.8939
+[28,]  5.0480  5.0480
+[29,]  6.3346  6.3346
+[30,] 11.1347 11.1347
+
+Stress per point columns:
+          SPP  SPP(%)
+ [1,]  1.4185  1.4185
+ [2,]  1.6878  1.6878
+ [3,]  1.7060  1.7060
+ [4,]  1.7234  1.7234
+ [5,]  1.7234  1.7234
+ [6,]  1.8478  1.8478
+ [7,]  1.9134  1.9134
+ [8,]  2.0259  2.0259
+ [9,]  2.2155  2.2155
+[10,]  2.2264  2.2264
+[11,]  2.2798  2.2798
+[12,]  2.3432  2.3432
+[13,]  2.4218  2.4218
+[14,]  2.8455  2.8455
+[15,]  2.8645  2.8645
+[16,]  2.9340  2.9340
+[17,]  3.0718  3.0718
+[18,]  3.1020  3.1020
+[19,]  3.4459  3.4459
+[20,]  3.4647  3.4647
+[21,]  3.7958  3.7958
+[22,]  3.8358  3.8358
+[23,]  3.9954  3.9954
+[24,]  4.3046  4.3046
+[25,]  4.6409  4.6409
+[26,]  4.7551  4.7551
+[27,]  4.8939  4.8939
+[28,]  5.0480  5.0480
+[29,]  6.3346  6.3346
+[30,] 11.1347 11.1347</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.row, <span class="at">col.rows=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.row, <span class="st">"stressplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.row, <span class="st">"Shepard"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>2D Interval Matrix-Conditional Unfolding Model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>un_res.row <span class="ot">&lt;-</span> <span class="fu">unfolding</span>(pref_reverse_matrix, <span class="at">type=</span><span class="st">"interval"</span>, <span class="at">conditionality=</span><span class="st">"matrix"</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>un_res.row</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call: unfolding(delta = pref_reverse_matrix, type = "interval", conditionality = "matrix")
+
+Model:               Rectangular smacof 
+Number of subjects:  30 
+Number of objects:   12 
+Transformation:      interval 
+Conditionality:      matrix 
+
+Stress-1 value:    0.164483 
+Penalized Stress:  0.00111 
+Number of iterations: 1632 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(un_res.row)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Subject configuration (rows):
+           D1      D2
+ [1,] -0.6318  0.0555
+ [2,] -0.6154  0.2677
+ [3,] -0.6332  0.0665
+ [4,]  0.5477  0.2767
+ [5,] -0.6079  0.1317
+ [6,] -0.3083 -0.6474
+ [7,]  0.7200 -0.0371
+ [8,]  0.6172 -0.2847
+ [9,]  0.7085  0.1217
+[10,]  0.7018 -0.1173
+[11,] -0.6788 -0.2952
+[12,]  0.2101 -0.6632
+[13,] -0.6493 -0.2494
+[14,]  0.7115  0.0631
+[15,] -0.6691  0.0185
+[16,] -0.5436  0.4485
+[17,] -0.5586  0.4298
+[18,]  0.7128 -0.0116
+[19,]  0.7018 -0.1173
+[20,]  0.1021  0.7230
+[21,]  0.6935 -0.1129
+[22,]  0.5146  0.5211
+[23,] -0.4912  0.4959
+[24,] -0.3436 -0.6331
+[25,] -0.2594 -0.6003
+[26,] -0.4490 -0.5713
+[27,] -0.6615  0.2626
+[28,] -0.6205  0.1085
+[29,]  0.7207  0.0855
+[30,] -0.2866  0.4754
+
+Object configuration (columns):
+                   D1      D2
+Paramount     -0.8202  0.2749
+TheTop        -0.7070 -0.0731
+Bistro1245    -0.5493 -0.5290
+TheSwamp      -0.1296 -0.7256
+Mildreds      -0.3644  0.5817
+Emilianos     -0.4134  0.1883
+Leos706       -0.0492  0.1023
+BeefOBradys    0.3559 -0.6428
+TiAmo          0.4668  0.8592
+Carrabbas      0.7403  0.1198
+LasMargaritas  0.5612 -0.0233
+Shoneys        0.9088 -0.1325
+
+
+Stress per point rows:
+         SPP SPP(%)
+ [1,] 1.4798 1.4798
+ [2,] 1.4969 1.4969
+ [3,] 1.5985 1.5985
+ [4,] 1.6304 1.6304
+ [5,] 1.8042 1.8042
+ [6,] 1.9439 1.9439
+ [7,] 1.9439 1.9439
+ [8,] 1.9719 1.9719
+ [9,] 1.9914 1.9914
+[10,] 2.0994 2.0994
+[11,] 2.1271 2.1271
+[12,] 2.1895 2.1895
+[13,] 2.2001 2.2001
+[14,] 2.3662 2.3662
+[15,] 2.4041 2.4041
+[16,] 2.5067 2.5067
+[17,] 2.8358 2.8358
+[18,] 3.0818 3.0818
+[19,] 3.5971 3.5971
+[20,] 3.6301 3.6301
+[21,] 3.6394 3.6394
+[22,] 3.8467 3.8467
+[23,] 4.5963 4.5963
+[24,] 4.9042 4.9042
+[25,] 4.9739 4.9739
+[26,] 5.0000 5.0000
+[27,] 5.6166 5.6166
+[28,] 6.6199 6.6199
+[29,] 6.7633 6.7633
+[30,] 9.1411 9.1411
+
+Stress per point columns:
+         SPP SPP(%)
+ [1,] 1.4798 1.4798
+ [2,] 1.4969 1.4969
+ [3,] 1.5985 1.5985
+ [4,] 1.6304 1.6304
+ [5,] 1.8042 1.8042
+ [6,] 1.9439 1.9439
+ [7,] 1.9439 1.9439
+ [8,] 1.9719 1.9719
+ [9,] 1.9914 1.9914
+[10,] 2.0994 2.0994
+[11,] 2.1271 2.1271
+[12,] 2.1895 2.1895
+[13,] 2.2001 2.2001
+[14,] 2.3662 2.3662
+[15,] 2.4041 2.4041
+[16,] 2.5067 2.5067
+[17,] 2.8358 2.8358
+[18,] 3.0818 3.0818
+[19,] 3.5971 3.5971
+[20,] 3.6301 3.6301
+[21,] 3.6394 3.6394
+[22,] 3.8467 3.8467
+[23,] 4.5963 4.5963
+[24,] 4.9042 4.9042
+[25,] 4.9739 4.9739
+[26,] 5.0000 5.0000
+[27,] 5.6166 5.6166
+[28,] 6.6199 6.6199
+[29,] 6.7633 6.7633
+[30,] 9.1411 9.1411</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.row, <span class="at">col.rows=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.row, <span class="st">"stressplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.row, <span class="st">"Shepard"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>2D Ordinal Unfolding Model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>un_res.ord <span class="ot">&lt;-</span> <span class="fu">unfolding</span>(pref_reverse_matrix, <span class="at">type=</span><span class="st">"ordinal"</span>)</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>un_res.ord</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call: unfolding(delta = pref_reverse_matrix, type = "ordinal")
+
+Model:               Rectangular smacof 
+Number of subjects:  30 
+Number of objects:   12 
+Transformation:      ordinalp 
+Conditionality:      matrix 
+
+Stress-1 value:    0.085273 
+Penalized Stress:  1.652697 
+Number of iterations: 63 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(un_res.ord)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Subject configuration (rows):
+           D1      D2
+ [1,] -0.7341  0.0176
+ [2,] -0.7044  0.1715
+ [3,] -0.6855  0.0476
+ [4,]  0.4841  0.3250
+ [5,] -0.7287  0.1054
+ [6,] -0.2883 -0.6202
+ [7,]  0.7344 -0.0412
+ [8,]  0.5859 -0.3427
+ [9,]  0.6810  0.2011
+[10,]  0.6789 -0.1956
+[11,] -0.6628 -0.2269
+[12,]  0.2576 -0.6447
+[13,] -0.6290 -0.2005
+[14,]  0.6971  0.1319
+[15,] -0.7051 -0.0670
+[16,] -0.5174  0.4196
+[17,] -0.5888  0.4059
+[18,]  0.7209 -0.0127
+[19,]  0.6789 -0.1956
+[20,]  0.1149  0.6914
+[21,]  0.6708 -0.1771
+[22,]  0.4748  0.5429
+[23,] -0.4675  0.5212
+[24,] -0.3422 -0.6006
+[25,] -0.2139 -0.5248
+[26,] -0.4850 -0.5136
+[27,] -0.7057  0.2150
+[28,] -0.5313  0.0455
+[29,]  0.7088  0.1572
+[30,] -0.2697  0.4279
+
+Object configuration (columns):
+                   D1      D2
+Paramount     -0.8913  0.3001
+TheTop        -0.7095 -0.1497
+Bistro1245    -0.6088 -0.4992
+TheSwamp      -0.1098 -0.7424
+Mildreds      -0.3637  0.6234
+Emilianos     -0.1673  0.2125
+Leos706       -0.0543  0.0822
+BeefOBradys    0.3273 -0.6435
+TiAmo          0.4609  0.8440
+Carrabbas      0.7197  0.2241
+LasMargaritas  0.4689 -0.0639
+Shoneys        0.9278 -0.1876
+
+
+Stress per point rows:
+          SPP  SPP(%)
+ [1,]  1.0955  1.0955
+ [2,]  1.4182  1.4182
+ [3,]  1.4444  1.4444
+ [4,]  1.5063  1.5063
+ [5,]  1.6205  1.6205
+ [6,]  1.6466  1.6466
+ [7,]  1.6466  1.6466
+ [8,]  1.7621  1.7621
+ [9,]  1.7652  1.7652
+[10,]  1.8034  1.8034
+[11,]  1.8146  1.8146
+[12,]  2.0108  2.0108
+[13,]  2.0749  2.0749
+[14,]  2.1096  2.1096
+[15,]  2.1173  2.1173
+[16,]  2.1883  2.1883
+[17,]  2.2182  2.2182
+[18,]  2.4628  2.4628
+[19,]  2.4798  2.4798
+[20,]  2.7092  2.7092
+[21,]  3.0689  3.0689
+[22,]  3.6195  3.6195
+[23,]  3.9501  3.9501
+[24,]  3.9930  3.9930
+[25,]  4.3041  4.3041
+[26,]  4.4314  4.4314
+[27,]  4.5913  4.5913
+[28,]  6.3734  6.3734
+[29,]  9.3812  9.3812
+[30,] 18.3930 18.3930
+
+Stress per point columns:
+          SPP  SPP(%)
+ [1,]  1.0955  1.0955
+ [2,]  1.4182  1.4182
+ [3,]  1.4444  1.4444
+ [4,]  1.5063  1.5063
+ [5,]  1.6205  1.6205
+ [6,]  1.6466  1.6466
+ [7,]  1.6466  1.6466
+ [8,]  1.7621  1.7621
+ [9,]  1.7652  1.7652
+[10,]  1.8034  1.8034
+[11,]  1.8146  1.8146
+[12,]  2.0108  2.0108
+[13,]  2.0749  2.0749
+[14,]  2.1096  2.1096
+[15,]  2.1173  2.1173
+[16,]  2.1883  2.1883
+[17,]  2.2182  2.2182
+[18,]  2.4628  2.4628
+[19,]  2.4798  2.4798
+[20,]  2.7092  2.7092
+[21,]  3.0689  3.0689
+[22,]  3.6195  3.6195
+[23,]  3.9501  3.9501
+[24,]  3.9930  3.9930
+[25,]  4.3041  4.3041
+[26,]  4.4314  4.4314
+[27,]  4.5913  4.5913
+[28,]  6.3734  6.3734
+[29,]  9.3812  9.3812
+[30,] 18.3930 18.3930</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ord, <span class="at">col.rows=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ord, <span class="st">"stressplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ord, <span class="st">"Shepard"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-6-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>2D Ordinal Row-Conditional Unfolding Model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>un_res.ordrow <span class="ot">&lt;-</span> <span class="fu">unfolding</span>(pref_reverse_matrix, <span class="at">type=</span><span class="st">"ordinal"</span>, <span class="at">conditionality=</span><span class="st">"row"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in unfolding(pref_reverse_matrix, type = "ordinal", conditionality =
+"row"): Iteration limit reached! Increase itmax argument!</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>un_res.ordrow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call: unfolding(delta = pref_reverse_matrix, type = "ordinal", conditionality = "row")
+
+Model:               Rectangular smacof 
+Number of subjects:  30 
+Number of objects:   12 
+Transformation:      ordinalp 
+Conditionality:      row 
+
+Stress-1 value:    0.00596 
+Penalized Stress:  1.886149 
+Number of iterations: 10000 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(un_res.ordrow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Subject configuration (rows):
+           D1      D2
+ [1,] -0.9256 -0.0131
+ [2,] -0.5641  0.1876
+ [3,] -0.6698  0.0579
+ [4,]  0.4400  0.3438
+ [5,] -0.7375  0.0903
+ [6,] -0.1696 -0.3610
+ [7,]  0.9030 -0.0032
+ [8,]  0.4412 -0.2292
+ [9,]  0.6857  0.2119
+[10,]  0.7866 -0.1833
+[11,] -0.7647 -0.2108
+[12,]  0.1385 -0.3673
+[13,] -0.4278 -0.0826
+[14,]  0.9171  0.0907
+[15,] -0.7439 -0.0865
+[16,] -0.4437  0.2727
+[17,] -0.5780  0.3570
+[18,]  0.8446  0.0390
+[19,]  0.7866 -0.1833
+[20,]  0.2468  1.2749
+[21,]  0.5881 -0.1266
+[22,]  1.0474  1.0318
+[23,] -0.4883  0.5543
+[24,] -0.4337 -0.6122
+[25,] -0.0837 -0.2108
+[26,] -0.4353 -0.5441
+[27,] -0.9985  0.2359
+[28,] -0.2732  0.0026
+[29,]  1.1984  0.1532
+[30,] -0.1189  0.3037
+
+Object configuration (columns):
+                   D1      D2
+Paramount     -0.8014  0.2584
+TheTop        -0.5509 -0.1496
+Bistro1245    -0.4290 -0.5435
+TheSwamp      -0.0405 -0.6570
+Mildreds      -0.2279  0.5779
+Emilianos     -0.0748  0.2824
+Leos706       -0.0342  0.2257
+BeefOBradys    0.1625 -0.6218
+TiAmo          0.3165  0.8305
+Carrabbas      0.5602  0.2243
+LasMargaritas  0.3912 -0.1497
+Shoneys        0.7284 -0.2776
+
+
+Stress per point rows:
+          SPP  SPP(%)
+ [1,]  0.0022  0.0022
+ [2,]  0.0024  0.0024
+ [3,]  0.0025  0.0025
+ [4,]  0.0026  0.0026
+ [5,]  0.0026  0.0026
+ [6,]  0.0032  0.0032
+ [7,]  0.0046  0.0046
+ [8,]  0.0100  0.0100
+ [9,]  0.0214  0.0214
+[10,]  0.0508  0.0508
+[11,]  0.1625  0.1625
+[12,]  0.2196  0.2196
+[13,]  0.2741  0.2741
+[14,]  0.6137  0.6137
+[15,]  1.0970  1.0970
+[16,]  1.9514  1.9514
+[17,]  1.9619  1.9619
+[18,]  2.1340  2.1340
+[19,]  2.7245  2.7245
+[20,]  2.8650  2.8650
+[21,]  3.4052  3.4052
+[22,]  3.5039  3.5039
+[23,]  4.2382  4.2382
+[24,]  4.4869  4.4869
+[25,]  4.9924  4.9924
+[26,]  5.2673  5.2673
+[27,]  6.6049  6.6049
+[28,] 11.5668 11.5668
+[29,] 17.2896 17.2896
+[30,] 24.5386 24.5386
+
+Stress per point columns:
+          SPP  SPP(%)
+ [1,]  0.0022  0.0022
+ [2,]  0.0024  0.0024
+ [3,]  0.0025  0.0025
+ [4,]  0.0026  0.0026
+ [5,]  0.0026  0.0026
+ [6,]  0.0032  0.0032
+ [7,]  0.0046  0.0046
+ [8,]  0.0100  0.0100
+ [9,]  0.0214  0.0214
+[10,]  0.0508  0.0508
+[11,]  0.1625  0.1625
+[12,]  0.2196  0.2196
+[13,]  0.2741  0.2741
+[14,]  0.6137  0.6137
+[15,]  1.0970  1.0970
+[16,]  1.9514  1.9514
+[17,]  1.9619  1.9619
+[18,]  2.1340  2.1340
+[19,]  2.7245  2.7245
+[20,]  2.8650  2.8650
+[21,]  3.4052  3.4052
+[22,]  3.5039  3.5039
+[23,]  4.2382  4.2382
+[24,]  4.4869  4.4869
+[25,]  4.9924  4.9924
+[26,]  5.2673  5.2673
+[27,]  6.6049  6.6049
+[28,] 11.5668 11.5668
+[29,] 17.2896 17.2896
+[30,] 24.5386 24.5386</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ordrow, <span class="at">col.rows=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ordrow, <span class="st">"stressplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ordrow, <span class="st">"Shepard"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-7-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>2D Ordinal Matrix-Conditional Unfolding Model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>un_res.ordrow <span class="ot">&lt;-</span> <span class="fu">unfolding</span>(pref_reverse_matrix, <span class="at">type=</span><span class="st">"ordinal"</span>, <span class="at">ties=</span><span class="st">"secondary"</span> ,<span class="at">conditionality=</span><span class="st">"matrix"</span>)</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>un_res.ordrow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call: unfolding(delta = pref_reverse_matrix, type = "ordinal", conditionality = "matrix", 
+    ties = "secondary")
+
+Model:               Rectangular smacof 
+Number of subjects:  30 
+Number of objects:   12 
+Transformation:      ordinals 
+Conditionality:      matrix 
+
+Stress-1 value:    0.144163 
+Penalized Stress:  0.001059 
+Number of iterations: 1491 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(un_res.ordrow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Subject configuration (rows):
+           D1      D2
+ [1,] -0.7336 -0.0979
+ [2,] -0.7072  0.1136
+ [3,] -0.6921 -0.0822
+ [4,]  0.6284  0.1847
+ [5,] -0.7189  0.0525
+ [6,] -0.3006 -0.6606
+ [7,]  0.7191 -0.0124
+ [8,]  0.6129 -0.2760
+ [9,]  0.7092  0.0987
+[10,]  0.6975 -0.1115
+[11,] -0.7121 -0.1908
+[12,]  0.2074 -0.6736
+[13,] -0.6805 -0.1294
+[14,]  0.7154  0.0648
+[15,] -0.7234 -0.1082
+[16,] -0.5221  0.4638
+[17,] -0.5379  0.4475
+[18,]  0.7169 -0.0049
+[19,]  0.6975 -0.1115
+[20,]  0.0411  0.6912
+[21,]  0.6928 -0.1228
+[22,]  0.5322  0.5096
+[23,] -0.4901  0.4976
+[24,] -0.3467 -0.6218
+[25,] -0.2709 -0.6151
+[26,] -0.4861 -0.5328
+[27,] -0.7339  0.1660
+[28,] -0.5932  0.1027
+[29,]  0.7178  0.0715
+[30,] -0.2706  0.4838
+
+Object configuration (columns):
+                   D1      D2
+Paramount     -0.8150  0.1954
+TheTop        -0.7082 -0.1146
+Bistro1245    -0.6029 -0.4511
+TheSwamp      -0.1690 -0.7393
+Mildreds      -0.3496  0.6310
+Emilianos     -0.1832  0.3047
+Leos706       -0.0906  0.0804
+BeefOBradys    0.3656 -0.6848
+TiAmo          0.4280  0.8411
+Carrabbas      0.7216  0.0933
+LasMargaritas  0.5657 -0.0535
+Shoneys        0.8376 -0.1026
+
+
+Stress per point rows:
+          SPP  SPP(%)
+ [1,]  0.8018  0.8018
+ [2,]  0.8641  0.8641
+ [3,]  1.2137  1.2137
+ [4,]  1.2833  1.2833
+ [5,]  1.4253  1.4253
+ [6,]  1.4655  1.4655
+ [7,]  1.4666  1.4666
+ [8,]  1.5079  1.5079
+ [9,]  1.5501  1.5501
+[10,]  1.7218  1.7218
+[11,]  2.0198  2.0198
+[12,]  2.0198  2.0198
+[13,]  2.1044  2.1044
+[14,]  2.2438  2.2438
+[15,]  2.2794  2.2794
+[16,]  2.5143  2.5143
+[17,]  2.6546  2.6546
+[18,]  2.6651  2.6651
+[19,]  3.1794  3.1794
+[20,]  3.1909  3.1909
+[21,]  3.3889  3.3889
+[22,]  3.5436  3.5436
+[23,]  3.8142  3.8142
+[24,]  3.8592  3.8592
+[25,]  5.3623  5.3623
+[26,]  5.5663  5.5663
+[27,]  6.3396  6.3396
+[28,]  8.6145  8.6145
+[29,]  8.7158  8.7158
+[30,] 12.6239 12.6239
+
+Stress per point columns:
+          SPP  SPP(%)
+ [1,]  0.8018  0.8018
+ [2,]  0.8641  0.8641
+ [3,]  1.2137  1.2137
+ [4,]  1.2833  1.2833
+ [5,]  1.4253  1.4253
+ [6,]  1.4655  1.4655
+ [7,]  1.4666  1.4666
+ [8,]  1.5079  1.5079
+ [9,]  1.5501  1.5501
+[10,]  1.7218  1.7218
+[11,]  2.0198  2.0198
+[12,]  2.0198  2.0198
+[13,]  2.1044  2.1044
+[14,]  2.2438  2.2438
+[15,]  2.2794  2.2794
+[16,]  2.5143  2.5143
+[17,]  2.6546  2.6546
+[18,]  2.6651  2.6651
+[19,]  3.1794  3.1794
+[20,]  3.1909  3.1909
+[21,]  3.3889  3.3889
+[22,]  3.5436  3.5436
+[23,]  3.8142  3.8142
+[24,]  3.8592  3.8592
+[25,]  5.3623  5.3623
+[26,]  5.5663  5.5663
+[27,]  6.3396  6.3396
+[28,]  8.6145  8.6145
+[29,]  8.7158  8.7158
+[30,] 12.6239 12.6239</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ordrow, <span class="at">col.rows=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ordrow, <span class="st">"stressplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(un_res.ordrow, <span class="st">"Shepard"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-8-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Restaurants Preference Based on MDS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform MDS on the reversed res_reversed_data</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>mds_res <span class="ot">&lt;-</span> <span class="fu">mds</span>(res_reverse_matrix, <span class="at">ndim =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[lo] &lt;- x: number of items to replace is not a multiple of
+replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[up] &lt;- df[lo] &lt;- x: number of items to replace is not a multiple
+of replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[lo] &lt;- x: number of items to replace is not a multiple of
+replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[up] &lt;- df[lo] &lt;- x: number of items to replace is not a multiple
+of replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in wghts * diss^2: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in wgths * d * dhat: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - d: longer object length is not a multiple of shorter object
+length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in wgths * diss: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - e: longer object length is not a multiple of shorter object
+length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in w * Result^2: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - e: longer object length is not a multiple of shorter object
+length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - confdiss: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>mds_pref <span class="ot">&lt;-</span> <span class="fu">mds</span>(pref_reverse_matrix, <span class="at">ndim =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[lo] &lt;- x: number of items to replace is not a multiple of
+replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[up] &lt;- df[lo] &lt;- x: number of items to replace is not a multiple
+of replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[lo] &lt;- x: number of items to replace is not a multiple of
+replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in df[up] &lt;- df[lo] &lt;- x: number of items to replace is not a multiple
+of replacement length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in wghts * diss^2: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in wgths * d * dhat: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - d: longer object length is not a multiple of shorter object
+length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in wgths * diss: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - e: longer object length is not a multiple of shorter object
+length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in w * Result^2: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - e: longer object length is not a multiple of shorter object
+length</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dhat - confdiss: longer object length is not a multiple of shorter
+object length</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>res_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_res<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Restaurant"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(res_percep_data))</span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_pref<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Customer"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(preference_data))</span>
+<span id="cb98-5"><a href="#cb98-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pref_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb98-6"><a href="#cb98-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb98-7"><a href="#cb98-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the data frames</span></span>
+<span id="cb98-8"><a href="#cb98-8" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(res_mds_df, pref_mds_df)</span>
+<span id="cb98-9"><a href="#cb98-9" aria-hidden="true" tabindex="-1"></a>combined_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                         X1           X2       Type           Label
+Bistro 1245     -0.01603061 -0.301351818 Restaurant     Bistro 1245
+The Swamp       -0.58162471 -0.006420071 Restaurant       The Swamp
+Carrabbas        0.59677683  0.714356615 Restaurant       Carrabbas
+Las Margaritas  -0.26710751  0.478019380 Restaurant  Las Margaritas
+Beef O'Bradys    0.82037802 -0.135309768 Restaurant   Beef O'Bradys
+Mildred's       -0.27116056 -0.393102592 Restaurant       Mildred's
+The Top         -0.42498516  0.217859277 Restaurant         The Top
+Paramount Grill -0.71447594  0.093076633 Restaurant Paramount Grill
+Shoney's         0.49434331 -0.096294712 Restaurant        Shoney's
+Ti Amo           0.20926082 -0.563422523 Restaurant          Ti Amo
+Emiliano's      -0.14852172 -0.027215265 Restaurant      Emiliano's
+Leo's 706        0.30314723  0.019804845 Restaurant       Leo's 706
+1               -0.70415937 -0.122855385   Customer               1
+2               -0.56309030  0.116814436   Customer               2
+3               -0.48006174  0.360360567   Customer               3
+4                0.22272938  0.556679196   Customer               4
+5               -0.42338516 -0.372024086   Customer               5
+6               -0.14029420  0.006146519   Customer               6
+7                0.28417365 -0.102241399   Customer               7
+8                0.48071598  0.458934398   Customer               8
+9                0.38409934 -0.621523547   Customer               9
+10               0.63540069 -0.164283948   Customer              10
+11               0.12581588  0.197119305   Customer              11
+12               0.58739033  0.402477276   Customer              12
+13              -0.46563542  0.293848052   Customer              13
+14               0.44020112 -0.255209617   Customer              14
+15              -0.40055599  0.440572792   Customer              15
+16              -0.10667464 -0.554638424   Customer              16
+17              -0.52264548  0.042355444   Customer              17
+18               0.51794067  0.021637755   Customer              18
+19               0.48147348 -0.117068975   Customer              19
+20              -0.04050696 -0.437344669   Customer              20
+21               0.54710951  0.176050580   Customer              21
+22               0.18407682 -0.295096397   Customer              22
+23              -0.19121087 -0.485464115   Customer              23
+24              -0.08800796  0.515433699   Customer              24
+25              -0.10655616  0.400078182   Customer              25
+26              -0.27765275  0.136776627   Customer              26
+27              -0.27897954 -0.169813668   Customer              27
+28              -0.35499413 -0.099732268   Customer              28
+29               0.35903846  0.098898153   Customer              29
+30              -0.10575462 -0.426886481   Customer              30</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># Plot the combined preference map</span></span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined_df, <span class="fu">aes</span>(X1, X2, <span class="at">color =</span> Type, <span class="at">label =</span> Label)) <span class="sc">+</span></span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb100-5"><a href="#cb100-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Combined Preference Map for Restaurants and Customers'</span>) <span class="sc">+</span></span>
+<span id="cb100-6"><a href="#cb100-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">'Dimension 1'</span>) <span class="sc">+</span></span>
+<span id="cb100-7"><a href="#cb100-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">'Dimension 2'</span>) <span class="sc">+</span></span>
+<span id="cb100-8"><a href="#cb100-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Gender on Preference Map using MDS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrames</span></span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>res_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_res<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Restaurant"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(res_percep_data))</span>
+<span id="cb101-3"><a href="#cb101-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb101-4"><a href="#cb101-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-5"><a href="#cb101-5" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_pref<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Customer"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(customer_data))</span>
+<span id="cb101-6"><a href="#cb101-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pref_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb101-7"><a href="#cb101-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-8"><a href="#cb101-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label to numeric for merging</span></span>
+<span id="cb101-9"><a href="#cb101-9" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb101-10"><a href="#cb101-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure pref_mds_df has only the necessary columns before merging</span></span>
+<span id="cb101-11"><a href="#cb101-11" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> pref_mds_df <span class="sc">%&gt;%</span> <span class="fu">select</span>(X1, X2, Type, Label)</span>
+<span id="cb101-12"><a href="#cb101-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge customer demographics into preference data</span></span>
+<span id="cb101-13"><a href="#cb101-13" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pref_mds_df, customer_data, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Label"</span> <span class="ot">=</span> <span class="st">"Subject"</span>))</span>
+<span id="cb101-14"><a href="#cb101-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-15"><a href="#cb101-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label back to character for plotting</span></span>
+<span id="cb101-16"><a href="#cb101-16" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.character</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb101-17"><a href="#cb101-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-18"><a href="#cb101-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure pref_mds_df has only the necessary columns before merging</span></span>
+<span id="cb101-19"><a href="#cb101-19" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> pref_mds_df <span class="sc">%&gt;%</span> <span class="fu">select</span>(X1, X2, Type, Label, Gender)  <span class="co"># Keep Gender for coloring</span></span>
+<span id="cb101-20"><a href="#cb101-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-21"><a href="#cb101-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Gender column to res_mds_df with NA (since restaurants don't have gender)</span></span>
+<span id="cb101-22"><a href="#cb101-22" aria-hidden="true" tabindex="-1"></a>res_mds_df<span class="sc">$</span>Gender <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb101-23"><a href="#cb101-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-24"><a href="#cb101-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine both data frames</span></span>
+<span id="cb101-25"><a href="#cb101-25" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(res_mds_df, pref_mds_df)</span>
+<span id="cb101-26"><a href="#cb101-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine both datasets</span></span>
+<span id="cb101-27"><a href="#cb101-27" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(res_mds_df, pref_mds_df)</span>
+<span id="cb101-28"><a href="#cb101-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-29"><a href="#cb101-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot with demographic information (color-coded by Gender)</span></span>
+<span id="cb101-30"><a href="#cb101-30" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined_df, <span class="fu">aes</span>(X1, X2, <span class="at">shape =</span> Type, <span class="at">label =</span> Label)) <span class="sc">+</span></span>
+<span id="cb101-31"><a href="#cb101-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="st">"Customer"</span>, <span class="dv">3</span>, <span class="dv">5</span>), <span class="at">color =</span> <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="st">"Customer"</span>, Gender, <span class="st">"Restaurant"</span>))) <span class="sc">+</span></span>
+<span id="cb101-32"><a href="#cb101-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb101-33"><a href="#cb101-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Combined Preference Map with Customer Demographics"</span>) <span class="sc">+</span></span>
+<span id="cb101-34"><a href="#cb101-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Dimension 1"</span>) <span class="sc">+</span></span>
+<span id="cb101-35"><a href="#cb101-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Dimension 2"</span>) <span class="sc">+</span></span>
+<span id="cb101-36"><a href="#cb101-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb101-37"><a href="#cb101-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Male"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"Female"</span> <span class="ot">=</span> <span class="st">"pink"</span>, <span class="st">"Restaurant"</span> <span class="ot">=</span> <span class="st">"red"</span>)) <span class="sc">+</span></span>
+<span id="cb101-38"><a href="#cb101-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">size =</span> <span class="st">"none"</span>)  <span class="co"># Remove size legend for simplicity</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Age on Preference Map using MDS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrames for plotting</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>res_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_res<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Restaurant"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(res_percep_data))</span>
+<span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb102-4"><a href="#cb102-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-5"><a href="#cb102-5" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_pref<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Customer"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(customer_data))</span>
+<span id="cb102-6"><a href="#cb102-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pref_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb102-7"><a href="#cb102-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-8"><a href="#cb102-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label to numeric for merging</span></span>
+<span id="cb102-9"><a href="#cb102-9" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb102-10"><a href="#cb102-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-11"><a href="#cb102-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge customer age into preference data</span></span>
+<span id="cb102-12"><a href="#cb102-12" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pref_mds_df, customer_data <span class="sc">%&gt;%</span> <span class="fu">select</span>(Subject, Age), <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Label"</span> <span class="ot">=</span> <span class="st">"Subject"</span>))</span>
+<span id="cb102-13"><a href="#cb102-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-14"><a href="#cb102-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label back to character for plotting</span></span>
+<span id="cb102-15"><a href="#cb102-15" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.character</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb102-16"><a href="#cb102-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-17"><a href="#cb102-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Age column to res_mds_df with NA (since restaurants don't have Age)</span></span>
+<span id="cb102-18"><a href="#cb102-18" aria-hidden="true" tabindex="-1"></a>res_mds_df<span class="sc">$</span>Age <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb102-19"><a href="#cb102-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-20"><a href="#cb102-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine both datasets</span></span>
+<span id="cb102-21"><a href="#cb102-21" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(res_mds_df, pref_mds_df)</span>
+<span id="cb102-22"><a href="#cb102-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-23"><a href="#cb102-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot with age representation (e.g., color gradient based on Age)</span></span>
+<span id="cb102-24"><a href="#cb102-24" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined_df, <span class="fu">aes</span>(X1, X2, <span class="at">shape =</span> Type, <span class="at">label =</span> Label)) <span class="sc">+</span></span>
+<span id="cb102-25"><a href="#cb102-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="st">"Customer"</span>, <span class="dv">3</span>, <span class="dv">5</span>), <span class="at">color =</span> <span class="fu">ifelse</span>(Type <span class="sc">==</span> <span class="st">"Customer"</span>, Age, <span class="cn">NA</span>))) <span class="sc">+</span></span>
+<span id="cb102-26"><a href="#cb102-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb102-27"><a href="#cb102-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Combined Preference Map with Customer Age"</span>) <span class="sc">+</span></span>
+<span id="cb102-28"><a href="#cb102-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Dimension 1"</span>) <span class="sc">+</span></span>
+<span id="cb102-29"><a href="#cb102-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Dimension 2"</span>) <span class="sc">+</span></span>
+<span id="cb102-30"><a href="#cb102-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb102-31"><a href="#cb102-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_gradient</span>(<span class="at">low =</span> <span class="st">"yellow"</span>, <span class="at">high =</span> <span class="st">"red"</span>, <span class="at">na.value =</span> <span class="st">"green"</span>) <span class="sc">+</span>  <span class="co"># Color customers by Age</span></span>
+<span id="cb102-32"><a href="#cb102-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">size =</span> <span class="st">"none"</span>)  <span class="co"># Remove size legend for simplicity</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Income</strong> <strong>on Preference Map using MDS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required libraries</span></span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggrepel' was built under R version 4.4.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrames for plotting</span></span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a>res_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_res<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Restaurant"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(res_percep_data))</span>
+<span id="cb105-3"><a href="#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb105-4"><a href="#cb105-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-5"><a href="#cb105-5" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_pref<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Customer"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(customer_data))</span>
+<span id="cb105-6"><a href="#cb105-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pref_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb105-7"><a href="#cb105-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-8"><a href="#cb105-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label to numeric for merging</span></span>
+<span id="cb105-9"><a href="#cb105-9" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb105-10"><a href="#cb105-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-11"><a href="#cb105-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge customer income into preference data</span></span>
+<span id="cb105-12"><a href="#cb105-12" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pref_mds_df, customer_data <span class="sc">%&gt;%</span> <span class="fu">select</span>(Subject, Income), </span>
+<span id="cb105-13"><a href="#cb105-13" aria-hidden="true" tabindex="-1"></a>                         <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Label"</span> <span class="ot">=</span> <span class="st">"Subject"</span>))</span>
+<span id="cb105-14"><a href="#cb105-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-15"><a href="#cb105-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label back to character for plotting</span></span>
+<span id="cb105-16"><a href="#cb105-16" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.character</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb105-17"><a href="#cb105-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-18"><a href="#cb105-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Income column to res_mds_df with NA</span></span>
+<span id="cb105-19"><a href="#cb105-19" aria-hidden="true" tabindex="-1"></a>res_mds_df<span class="sc">$</span>Income <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb105-20"><a href="#cb105-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-21"><a href="#cb105-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine both datasets</span></span>
+<span id="cb105-22"><a href="#cb105-22" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(res_mds_df, pref_mds_df)</span>
+<span id="cb105-23"><a href="#cb105-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-24"><a href="#cb105-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Income to a factor for better color mapping</span></span>
+<span id="cb105-25"><a href="#cb105-25" aria-hidden="true" tabindex="-1"></a>combined_df<span class="sc">$</span>Income <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(combined_df<span class="sc">$</span>Income)</span>
+<span id="cb105-26"><a href="#cb105-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-27"><a href="#cb105-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sufficient number of colors using color brewer</span></span>
+<span id="cb105-28"><a href="#cb105-28" aria-hidden="true" tabindex="-1"></a>num_levels <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(combined_df<span class="sc">$</span>Income))</span>
+<span id="cb105-29"><a href="#cb105-29" aria-hidden="true" tabindex="-1"></a>custom_colors <span class="ot">&lt;-</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(</span>
+<span id="cb105-30"><a href="#cb105-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#FF1E1E"</span>, <span class="st">"#FF8C00"</span>, <span class="st">"#FFD700"</span>, <span class="st">"#32CD32"</span>, </span>
+<span id="cb105-31"><a href="#cb105-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#1E90FF"</span>, <span class="st">"#9370DB"</span>, <span class="st">"#FF69B4"</span>, <span class="st">"#00CED1"</span>,</span>
+<span id="cb105-32"><a href="#cb105-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#FF4500"</span>, <span class="st">"#7B68EE"</span>, <span class="st">"#20B2AA"</span>, <span class="st">"#E0F7FF"</span>,</span>
+<span id="cb105-33"><a href="#cb105-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#FFF9E3"</span>, <span class="st">"#800020"</span>, <span class="st">"#3CB371"</span>, <span class="st">"#BA55D3"</span>,</span>
+<span id="cb105-34"><a href="#cb105-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#C3B091"</span>, <span class="st">"#6495ED"</span>, <span class="st">"#98FB98"</span>, <span class="st">"#DDA0DD"</span></span>
+<span id="cb105-35"><a href="#cb105-35" aria-hidden="true" tabindex="-1"></a>))(num_levels)</span>
+<span id="cb105-36"><a href="#cb105-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-37"><a href="#cb105-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Enhanced ggplot with more visual elements</span></span>
+<span id="cb105-38"><a href="#cb105-38" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined_df, <span class="fu">aes</span>(X1, X2, <span class="at">shape =</span> Type, <span class="at">label =</span> Label)) <span class="sc">+</span></span>
+<span id="cb105-39"><a href="#cb105-39" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add a subtle grid background</span></span>
+<span id="cb105-40"><a href="#cb105-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>), <span class="at">color =</span> <span class="st">"gray90"</span>, <span class="at">linewidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb105-41"><a href="#cb105-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>), <span class="at">color =</span> <span class="st">"gray90"</span>, <span class="at">linewidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb105-42"><a href="#cb105-42" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb105-43"><a href="#cb105-43" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add points with enhanced aesthetics</span></span>
+<span id="cb105-44"><a href="#cb105-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Income), <span class="at">size =</span> <span class="fu">ifelse</span>(combined_df<span class="sc">$</span>Type <span class="sc">==</span> <span class="st">"Restaurant"</span>, <span class="dv">4</span>, <span class="dv">3</span>), <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb105-45"><a href="#cb105-45" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb105-46"><a href="#cb105-46" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add labels with improved positioning</span></span>
+<span id="cb105-47"><a href="#cb105-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb105-48"><a href="#cb105-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> combined_df,</span>
+<span id="cb105-49"><a href="#cb105-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> Label),</span>
+<span id="cb105-50"><a href="#cb105-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="fl">3.5</span>,</span>
+<span id="cb105-51"><a href="#cb105-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">box.padding =</span> <span class="fl">0.5</span>,</span>
+<span id="cb105-52"><a href="#cb105-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">point.padding =</span> <span class="fl">0.3</span>,</span>
+<span id="cb105-53"><a href="#cb105-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">force =</span> <span class="dv">5</span>,</span>
+<span id="cb105-54"><a href="#cb105-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">segment.color =</span> <span class="st">"gray50"</span>,</span>
+<span id="cb105-55"><a href="#cb105-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">segment.alpha =</span> <span class="fl">0.5</span>,</span>
+<span id="cb105-56"><a href="#cb105-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">max.overlaps =</span> <span class="cn">Inf</span></span>
+<span id="cb105-57"><a href="#cb105-57" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb105-58"><a href="#cb105-58" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb105-59"><a href="#cb105-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Customize the appearance</span></span>
+<span id="cb105-60"><a href="#cb105-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(custom_colors), <span class="at">na.value =</span> <span class="st">"#2F4F4F"</span>) <span class="sc">+</span></span>
+<span id="cb105-61"><a href="#cb105-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="at">Customer =</span> <span class="dv">16</span>, <span class="at">Restaurant =</span> <span class="dv">17</span>)) <span class="sc">+</span></span>
+<span id="cb105-62"><a href="#cb105-62" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb105-63"><a href="#cb105-63" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Enhance the theme</span></span>
+<span id="cb105-64"><a href="#cb105-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb105-65"><a href="#cb105-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb105-66"><a href="#cb105-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">b =</span> <span class="dv">20</span>)),</span>
+<span id="cb105-67"><a href="#cb105-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="cn">NA</span>),</span>
+<span id="cb105-68"><a href="#cb105-68" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"gray95"</span>),</span>
+<span id="cb105-69"><a href="#cb105-69" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb105-70"><a href="#cb105-70" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb105-71"><a href="#cb105-71" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.box =</span> <span class="st">"vertical"</span>,</span>
+<span id="cb105-72"><a href="#cb105-72" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb105-73"><a href="#cb105-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb105-74"><a href="#cb105-74" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
+<span id="cb105-75"><a href="#cb105-75" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb105-76"><a href="#cb105-76" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb105-77"><a href="#cb105-77" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add titles and labels</span></span>
+<span id="cb105-78"><a href="#cb105-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb105-79"><a href="#cb105-79" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Restaurant Preference Map with Customer Income"</span>,</span>
+<span id="cb105-80"><a href="#cb105-80" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Dimension 1"</span>,</span>
+<span id="cb105-81"><a href="#cb105-81" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Dimension 2"</span>,</span>
+<span id="cb105-82"><a href="#cb105-82" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Income Level"</span>,</span>
+<span id="cb105-83"><a href="#cb105-83" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> <span class="st">"Type"</span></span>
+<span id="cb105-84"><a href="#cb105-84" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb105-85"><a href="#cb105-85" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb105-86"><a href="#cb105-86" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set plot boundaries</span></span>
+<span id="cb105-87"><a href="#cb105-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.8</span>, <span class="fl">0.8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Race</strong> <strong>on Preference Map using MDS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrames for plotting</span></span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a>res_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_res<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Restaurant"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(res_percep_data))</span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-5"><a href="#cb106-5" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_pref<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Customer"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(customer_data))</span>
+<span id="cb106-6"><a href="#cb106-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pref_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb106-7"><a href="#cb106-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-8"><a href="#cb106-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label to numeric for merging</span></span>
+<span id="cb106-9"><a href="#cb106-9" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb106-10"><a href="#cb106-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-11"><a href="#cb106-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge customer race into preference data</span></span>
+<span id="cb106-12"><a href="#cb106-12" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pref_mds_df, customer_data <span class="sc">%&gt;%</span> <span class="fu">select</span>(Subject, Race), <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Label"</span> <span class="ot">=</span> <span class="st">"Subject"</span>))</span>
+<span id="cb106-13"><a href="#cb106-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-14"><a href="#cb106-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label back to character for plotting</span></span>
+<span id="cb106-15"><a href="#cb106-15" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.character</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb106-16"><a href="#cb106-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-17"><a href="#cb106-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Race column to res_mds_df with NA (since restaurants don't have Race)</span></span>
+<span id="cb106-18"><a href="#cb106-18" aria-hidden="true" tabindex="-1"></a>res_mds_df<span class="sc">$</span>Race <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb106-19"><a href="#cb106-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-20"><a href="#cb106-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine both datasets</span></span>
+<span id="cb106-21"><a href="#cb106-21" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(res_mds_df, pref_mds_df)</span>
+<span id="cb106-22"><a href="#cb106-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-23"><a href="#cb106-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Race to a factor (categorical)</span></span>
+<span id="cb106-24"><a href="#cb106-24" aria-hidden="true" tabindex="-1"></a>combined_df<span class="sc">$</span>Race <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(combined_df<span class="sc">$</span>Race)</span>
+<span id="cb106-25"><a href="#cb106-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-26"><a href="#cb106-26" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined_df, <span class="fu">aes</span>(X1, X2, <span class="at">shape =</span> Type, <span class="at">label =</span> Label)) <span class="sc">+</span></span>
+<span id="cb106-27"><a href="#cb106-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> Race), <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span>  </span>
+<span id="cb106-28"><a href="#cb106-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.7</span>, <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span>  </span>
+<span id="cb106-29"><a href="#cb106-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Combined Preference Map with Customer Race"</span>) <span class="sc">+</span></span>
+<span id="cb106-30"><a href="#cb106-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Dimension 1"</span>) <span class="sc">+</span></span>
+<span id="cb106-31"><a href="#cb106-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Dimension 2"</span>) <span class="sc">+</span></span>
+<span id="cb106-32"><a href="#cb106-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb106-33"><a href="#cb106-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>, <span class="at">na.value =</span> <span class="st">"gray"</span>) <span class="sc">+</span>  <span class="co"># Use a categorical color scale</span></span>
+<span id="cb106-34"><a href="#cb106-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>)) <span class="sc">+</span>  <span class="co"># Fixed size for all points</span></span>
+<span id="cb106-35"><a href="#cb106-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">"Race"</span>), <span class="at">size =</span> <span class="st">"none"</span>)  <span class="co"># Use legend</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Number of Children</strong> <strong>on Preference Map using MDS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrames for plotting with consistent columns</span></span>
+<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a>res_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_res<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Restaurant"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(res_percep_data))</span>
+<span id="cb107-3"><a href="#cb107-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb107-4"><a href="#cb107-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-5"><a href="#cb107-5" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(mds_pref<span class="sc">$</span>conf, <span class="at">Type =</span> <span class="st">"Customer"</span>, <span class="at">Label =</span> <span class="fu">rownames</span>(customer_data))</span>
+<span id="cb107-6"><a href="#cb107-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pref_mds_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"X1"</span>, <span class="st">"X2"</span>, <span class="st">"Type"</span>, <span class="st">"Label"</span>)</span>
+<span id="cb107-7"><a href="#cb107-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-8"><a href="#cb107-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label to integer in pref_mds_df to match Subject type in customer_data</span></span>
+<span id="cb107-9"><a href="#cb107-9" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb107-10"><a href="#cb107-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-11"><a href="#cb107-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the join with integer types</span></span>
+<span id="cb107-12"><a href="#cb107-12" aria-hidden="true" tabindex="-1"></a>pref_mds_df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pref_mds_df, customer_data <span class="sc">%&gt;%</span> </span>
+<span id="cb107-13"><a href="#cb107-13" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">select</span>(Subject, NumofChildren), </span>
+<span id="cb107-14"><a href="#cb107-14" aria-hidden="true" tabindex="-1"></a>                         <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"Label"</span> <span class="ot">=</span> <span class="st">"Subject"</span>))</span>
+<span id="cb107-15"><a href="#cb107-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-16"><a href="#cb107-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Label back to character for consistency with res_mds_df</span></span>
+<span id="cb107-17"><a href="#cb107-17" aria-hidden="true" tabindex="-1"></a>pref_mds_df<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">as.character</span>(pref_mds_df<span class="sc">$</span>Label)</span>
+<span id="cb107-18"><a href="#cb107-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-19"><a href="#cb107-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Add NumChildren to restaurant data (all zeros)</span></span>
+<span id="cb107-20"><a href="#cb107-20" aria-hidden="true" tabindex="-1"></a>res_mds_df<span class="sc">$</span>NumChildren <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb107-21"><a href="#cb107-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-22"><a href="#cb107-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure column names match exactly</span></span>
+<span id="cb107-23"><a href="#cb107-23" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(pref_mds_df)[<span class="fu">names</span>(pref_mds_df) <span class="sc">==</span> <span class="st">"NumofChildren"</span>] <span class="ot">&lt;-</span> <span class="st">"NumChildren"</span></span>
+<span id="cb107-24"><a href="#cb107-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-25"><a href="#cb107-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Now combine the data frames</span></span>
+<span id="cb107-26"><a href="#cb107-26" aria-hidden="true" tabindex="-1"></a>combined_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(res_mds_df, pref_mds_df)</span>
+<span id="cb107-27"><a href="#cb107-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-28"><a href="#cb107-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot with color indicating number of children</span></span>
+<span id="cb107-29"><a href="#cb107-29" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined_df, <span class="fu">aes</span>(X1, X2, <span class="at">shape =</span> Type, <span class="at">label =</span> Label)) <span class="sc">+</span></span>
+<span id="cb107-30"><a href="#cb107-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> NumChildren), <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb107-31"><a href="#cb107-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.7</span>, <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb107-32"><a href="#cb107-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Combined Preference Map with Number of Children"</span>) <span class="sc">+</span></span>
+<span id="cb107-33"><a href="#cb107-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Dimension 1"</span>) <span class="sc">+</span></span>
+<span id="cb107-34"><a href="#cb107-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Dimension 2"</span>) <span class="sc">+</span></span>
+<span id="cb107-35"><a href="#cb107-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb107-36"><a href="#cb107-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Customer"</span> <span class="ot">=</span> <span class="dv">16</span>, <span class="st">"Restaurant"</span> <span class="ot">=</span> <span class="dv">17</span>)) <span class="sc">+</span> <span class="co"># Different shapes for Customer/Restaurant</span></span>
+<span id="cb107-37"><a href="#cb107-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_gradient</span>(<span class="at">low =</span> <span class="st">"lightblue"</span>, <span class="at">high =</span> <span class="st">"darkred"</span>) <span class="sc">+</span> <span class="co"># Color gradient for number of children</span></span>
+<span id="cb107-38"><a href="#cb107-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>)) <span class="sc">+</span> <span class="co"># Fixed size for all points</span></span>
+<span id="cb107-39"><a href="#cb107-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_colorbar</span>(<span class="at">title =</span> <span class="st">"Number of Children"</span>),</span>
+<span id="cb107-40"><a href="#cb107-40" aria-hidden="true" tabindex="-1"></a>         <span class="at">size =</span> <span class="st">"none"</span>) <span class="co"># Remove size legend since we're using fixed size</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Perform PCA and Preference Map based on PCA</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required libraries</span></span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cluster)  <span class="co"># For sim2diss function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'cluster' was built under R version 4.4.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to read and prepare perception data</span></span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>prepare_perception_data <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create perception data</span></span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>  perception_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb110-5"><a href="#cb110-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Restaurant =</span> <span class="fu">c</span>(<span class="st">"Bistro 1245"</span>, <span class="st">"The Swamp"</span>, <span class="st">"Carrabbas"</span>, <span class="st">"Las Margaritas"</span>, </span>
+<span id="cb110-6"><a href="#cb110-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Beef O'Bradys"</span>, <span class="st">"Mildred's"</span>, <span class="st">"The Top"</span>, <span class="st">"Paramount Grill"</span>,</span>
+<span id="cb110-7"><a href="#cb110-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Shoney's"</span>, <span class="st">"Ti Amo"</span>, <span class="st">"Emiliano's"</span>, <span class="st">"Leo's 706"</span>),</span>
+<span id="cb110-8"><a href="#cb110-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Location =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">4</span>),</span>
+<span id="cb110-9"><a href="#cb110-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Food =</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>),</span>
+<span id="cb110-10"><a href="#cb110-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">Price =</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),</span>
+<span id="cb110-11"><a href="#cb110-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">Atmosphere =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">4</span>),</span>
+<span id="cb110-12"><a href="#cb110-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Seating =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">4</span>,<span class="dv">4</span>),</span>
+<span id="cb110-13"><a href="#cb110-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Libations =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">3</span>),</span>
+<span id="cb110-14"><a href="#cb110-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">Parking =</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>)</span>
+<span id="cb110-15"><a href="#cb110-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb110-16"><a href="#cb110-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-17"><a href="#cb110-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Reverse code the perception data (assuming a 1-7 scale, subtract from 8)</span></span>
+<span id="cb110-18"><a href="#cb110-18" aria-hidden="true" tabindex="-1"></a>  perception_data[,<span class="sc">-</span><span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> perception_data[,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb110-19"><a href="#cb110-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-20"><a href="#cb110-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set restaurant names as row names and remove Restaurant column</span></span>
+<span id="cb110-21"><a href="#cb110-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row.names</span>(perception_data) <span class="ot">&lt;-</span> perception_data<span class="sc">$</span>Restaurant</span>
+<span id="cb110-22"><a href="#cb110-22" aria-hidden="true" tabindex="-1"></a>  perception_data <span class="ot">&lt;-</span> perception_data[, <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb110-23"><a href="#cb110-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-24"><a href="#cb110-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(perception_data)</span>
+<span id="cb110-25"><a href="#cb110-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb110-26"><a href="#cb110-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb110-27"><a href="#cb110-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to read and prepare preference data</span></span>
+<span id="cb110-28"><a href="#cb110-28" aria-hidden="true" tabindex="-1"></a>prepare_preference_data <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb110-29"><a href="#cb110-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Read preference data from CSV file</span></span>
+<span id="cb110-30"><a href="#cb110-30" aria-hidden="true" tabindex="-1"></a>  preferences <span class="ot">&lt;-</span> preference_data</span>
+<span id="cb110-31"><a href="#cb110-31" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-32"><a href="#cb110-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Set column names based on the first row</span></span>
+<span id="cb110-33"><a href="#cb110-33" aria-hidden="true" tabindex="-1"></a>  restaurants <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Paramount"</span>, <span class="st">"TheTop"</span>, <span class="st">"Bistro1245"</span>, <span class="st">"TheSwamp"</span>, <span class="st">"Mildreds"</span>,</span>
+<span id="cb110-34"><a href="#cb110-34" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"Emilianos"</span>, <span class="st">"Leos706"</span>, <span class="st">"BeefOBradys"</span>, <span class="st">"TiAmo"</span>, <span class="st">"Carrabbas"</span>,</span>
+<span id="cb110-35"><a href="#cb110-35" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"LasMargaritas"</span>, <span class="st">"Shoneys"</span>)</span>
+<span id="cb110-36"><a href="#cb110-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(preferences) <span class="ot">&lt;-</span> restaurants</span>
+<span id="cb110-37"><a href="#cb110-37" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-38"><a href="#cb110-38" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert similarity to dissimilarity using sim2diss with correct method</span></span>
+<span id="cb110-39"><a href="#cb110-39" aria-hidden="true" tabindex="-1"></a>  preferences_diss <span class="ot">&lt;-</span> <span class="fu">sim2diss</span>(<span class="fu">as.matrix</span>(preferences), <span class="at">method =</span> <span class="st">"reverse"</span>)</span>
+<span id="cb110-40"><a href="#cb110-40" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-41"><a href="#cb110-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(preferences_diss)</span>
+<span id="cb110-42"><a href="#cb110-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb110-43"><a href="#cb110-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb110-44"><a href="#cb110-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform PCA and create preference map</span></span>
+<span id="cb110-45"><a href="#cb110-45" aria-hidden="true" tabindex="-1"></a>create_preference_map <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb110-46"><a href="#cb110-46" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Prepare data</span></span>
+<span id="cb110-47"><a href="#cb110-47" aria-hidden="true" tabindex="-1"></a>  perception_data <span class="ot">&lt;-</span> <span class="fu">prepare_perception_data</span>()</span>
+<span id="cb110-48"><a href="#cb110-48" aria-hidden="true" tabindex="-1"></a>  preference_data <span class="ot">&lt;-</span> <span class="fu">prepare_preference_data</span>()</span>
+<span id="cb110-49"><a href="#cb110-49" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-50"><a href="#cb110-50" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Perform PCA on perception data</span></span>
+<span id="cb110-51"><a href="#cb110-51" aria-hidden="true" tabindex="-1"></a>  pca_result <span class="ot">&lt;-</span> <span class="fu">PCA</span>(perception_data, <span class="at">scale.unit =</span> <span class="cn">TRUE</span>, <span class="at">graph =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb110-52"><a href="#cb110-52" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-53"><a href="#cb110-53" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create preference map</span></span>
+<span id="cb110-54"><a href="#cb110-54" aria-hidden="true" tabindex="-1"></a>  pref_map <span class="ot">&lt;-</span> <span class="fu">fviz_pca_biplot</span>(pca_result,</span>
+<span id="cb110-55"><a href="#cb110-55" aria-hidden="true" tabindex="-1"></a>                              <span class="at">label =</span> <span class="st">"all"</span>,         <span class="co"># Show all labels</span></span>
+<span id="cb110-56"><a href="#cb110-56" aria-hidden="true" tabindex="-1"></a>                              <span class="at">repel =</span> <span class="cn">TRUE</span>,          <span class="co"># Avoid label overlap</span></span>
+<span id="cb110-57"><a href="#cb110-57" aria-hidden="true" tabindex="-1"></a>                              <span class="at">title =</span> <span class="st">"Restaurant Preference Map"</span>,</span>
+<span id="cb110-58"><a href="#cb110-58" aria-hidden="true" tabindex="-1"></a>                              <span class="at">col.var =</span> <span class="st">"red"</span>,       <span class="co"># Variables color</span></span>
+<span id="cb110-59"><a href="#cb110-59" aria-hidden="true" tabindex="-1"></a>                              <span class="at">col.ind =</span> <span class="st">"blue"</span>,      <span class="co"># Individuals color</span></span>
+<span id="cb110-60"><a href="#cb110-60" aria-hidden="true" tabindex="-1"></a>                              <span class="at">legend.title =</span> <span class="st">"Type"</span>) <span class="sc">+</span></span>
+<span id="cb110-61"><a href="#cb110-61" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
+<span id="cb110-62"><a href="#cb110-62" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb110-63"><a href="#cb110-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(pref_map)</span>
+<span id="cb110-64"><a href="#cb110-64" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb110-65"><a href="#cb110-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb110-66"><a href="#cb110-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Execute the analysis</span></span>
+<span id="cb110-67"><a href="#cb110-67" aria-hidden="true" tabindex="-1"></a>preference_map <span class="ot">&lt;-</span> <span class="fu">create_preference_map</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-16-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(preference_map)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TeamProject3_reversecoding_files/figure-html/unnamed-chunk-16-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
