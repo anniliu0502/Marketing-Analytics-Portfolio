@@ -70,33 +70,32 @@ Map the competitive restaurant landscape to:
 - The Swamp
 
 **Ti Amo's Competitive Position**
-Current Strengths:
-
-High scores on Atmosphere (5/7)
-Strong Libations (5/7)
-Good Location (3/7)
-
+- Current Strengths:
+ 1.High scores on Atmosphere (5/7)
+ 2.Strong Libations (5/7)
+ 3.Good Location (3/7)
 **Positioned near: Customers 22, 9, and Sub-cluster (23, 30, 20, 16)**
-**Customer Segmentation
-Three Major Clusters:**
+  
+**Customer Segmentation**
+- **Three Major Clusters:**
 - Cluster 1: Fewer children, middle-to-high income, younger, high atmosphere preference
 - Cluster 2: High income, fewer children, high spending, strong atmosphere emphasis
 - Cluster 3: Low income, more children, younger, lower atmosphere priority
 **High-Value Sub-Clusters:**
 **Sub-cluster (23, 30, 20, 16) - PRIMARY TARGET**
 
-Income up to** $125,000**
-Few/no children (0-1)
-High food quality importance (9-11/scale)
-High atmosphere & seating importance
-Not price-sensitive
-**Prefer premium dining experiences**
+Income up to** $125,000**/n
+Few/no children (0-1)/n
+High food quality importance (9-11/scale)/n
+High atmosphere & seating importance/n
+Not price-sensitive/n
+**Prefer premium dining experiences**/n
 
-Sub-cluster (3, 15, 13)
+Sub-cluster (3, 15, 13)/n
 
-Younger age
-Middle-to-upper income
-Distinct preferences
+Younger age/n
+Middle-to-upper income/n
+Distinct preferences/n
 
 **Customer Insights: Mildred's & Bistro 1245 Example**
 Customers 16, 20, 23, 30 cluster near these restaurants because:
