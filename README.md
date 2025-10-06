@@ -3,6 +3,7 @@ Hi there! I'm Anni! <br>
 _Turning data, and curiosity into marketing magic_  <br>
 
 I'm a Marketing Analytics grad who believes the best business decisions are backed by data, creativity, and a dash of strategic thinking. Whether it's predicting what makes customers tick or launching the next viral product, I love diving into the numbers to tell compelling stories. <br>
+
 **What I do:** Transform messy data into "aha!" moments that drive real business results. <br>
 **What drives me:** The excitement of finding patterns where others see noise, and creating strategies that actually work. <br>
 
@@ -12,25 +13,27 @@ Each project in the portfolio showcases a different skill, but they all have one
 
 ---
 
-**Featured Projects**
+**Featured Projects** <br>
 1. Uniscent Smart Deodorant: From Zero to Market Hero <br>
+
 The Challenge: Launch an AI-powered deodorant that doesn't exist yet in a $9B market <br>
 The Plot Twist: Men are really anxious about smelling bad (72% worry about their body scent!) <br>
-What I Did: <br>
 
-Identified a glaring market gap: No smart, personalized deodorant exists <br>
-Decoded consumer psychology: 48% cancel plans with friends over odor anxiety (yikes!) <br>
-Created a killer go-to-market strategy: Pop-up "scent labs" in gyms + viral TikTok challenges <br>
-Projected the numbers: $1.35M Year 1 revenue, 58% profit margin, break-even in 18 months <br>
+What I Did: <br>
+- Identified a glaring market gap: No smart, personalized deodorant exists <br>
+- Decoded consumer psychology: 48% cancel plans with friends over odor anxiety (yikes!) <br>
+- Created a killer go-to-market strategy: Pop-up "scent labs" in gyms + viral TikTok challenges <br>
+- Projected the numbers: $1.35M Year 1 revenue, 58% profit margin, break-even in 18 months <br>
 
 Competitive Advantage: <br>
 Combined tech innovation (AI body odor analysis) with experiential marketing (gym takeovers) and community building (#FreshnessGlowUp). Most importantly, made it eco-friendly for the target audience. <br>
+
 Marketing Strategies: Partnered with athletes, created a drag-and-drop scent customization app, and designed a loyalty program with actual rewards people want. <br>
 Skills Flexed: Market research • Brand positioning • Launch strategy • Financial forecasting • Consumer psychology • Omnichannel planning <br>
 
 ---
 2. Restaurant Analytics: Where Data Meets Delicious <br> 
-Two-part series on understanding what makes diners choose one restaurant over another <br>
+- Two-part series on understanding what makes diners choose one restaurant over another <br>
 Part I: The Luxury Gourmet Chronicles <br>
 Mission: Find the customers worth fighting for <br>
 I took 200 restaurant customers and 15 variables about their preferences and used PCA to distill them down to what actually matters: <br>
