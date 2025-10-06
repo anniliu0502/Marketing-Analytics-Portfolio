@@ -93,7 +93,7 @@ Phase 1: Launch in NYC & LA
 ---
 
 **Financial Projections** <bn/>
-Investment & Returns
+Investment & Returns <bn/>
 
 Short-Term Launch Costs: ~$70K <bn/>
 Long-Term R&D & Expansion: ~$70K/year <bn/>
