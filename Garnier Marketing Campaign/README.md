@@ -92,20 +92,20 @@ Phase 1: Launch in NYC & LA
 
 ---
 
-**Financial Projections** <bn/>
-Investment & Returns <bn/>
+**Financial Projections** <br>
+Investment & Returns <br>
 
-Short-Term Launch Costs: ~$70K <bn/>
-Long-Term R&D & Expansion: ~$70K/year <bn/>
-Year 1 Profit: $609K <bn/>
-Year 2 Profit: $915K <bn/>
-Year 3 Profit: $1.37M <bn/>
-Profit Margin: 58% <bn/>
+Short-Term Launch Costs: ~$70K <br>
+Long-Term R&D & Expansion: ~$70K/year <br>
+Year 1 Profit: $609K <br>
+Year 2 Profit: $915K <br>
+Year 3 Profit: $1.37M <br>
+Profit Margin: 58% <br>
 
 ---
 
-**Marketing KPIs & Success Metrics** <bn/>
-Strategic Pillars <bn/>
+**Marketing KPIs & Success Metrics** <br>
+Strategic Pillars <br>
 
 - Unique Value Proposition: AI-powered personalization + sustainability
 - Consumer-Centric Approach: Addressing body odor anxiety
@@ -120,7 +120,7 @@ Competitive Positioning
 - Garnier Integration (34%): Leveraging existing brand equity
 
 ---
-**Long-Term Strategy** <bn/>
+**Long-Term Strategy** <br>
 Sustainability Initiatives
 
 - Loyalty program for repeat customers
@@ -136,7 +136,7 @@ Future Expansion Plans
 
 ---
 
-**Key Learnings & Insights** <bn/>
+**Key Learnings & Insights** <br>
 - Market Gap Exploitation: Successfully identified unmet need for personalized, tech-driven deodorant solutions
 - Consumer Psychology: Addressed deep-rooted social anxiety around body odor
 - Omnichannel Approach: Balanced digital innovation with experiential retail
