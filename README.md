@@ -1,219 +1,136 @@
-My marketing Analytics projects using Python, R, and Excel - including K-means, PCA, and KNN for Business Insights.
-# Marketing Analytics Portfolio
+**Marketing Analytics Portfolio** <br>
+Hi there! I'm Anni! <br>
+_Turning data, and curiosity into marketing magic_  <br>
 
-Hi there! 
-I'm Anni, a Marketing Analytics graduate passionate about turning data into actionable business insights.  
-Here are selected projects demonstrating my analytical, technical, and strategic skills.
+I'm a Marketing Analytics grad who believes the best business decisions are backed by data, creativity, and a dash of strategic thinking. Whether it's predicting what makes customers tick or launching the next viral product, I love diving into the numbers to tell compelling stories. <br>
+**What I do:** Transform messy data into "aha!" moments that drive real business results. <br>
+**What drives me:** The excitement of finding patterns where others see noise, and creating strategies that actually work. <br>
 
 ---
-# Marketing Analytics Projects
-**Restaurant Analytics Portfolio:**
-  A collection of customer analysis projects applying statistical methods and machine learning to understand restaurant consumer behavior and optimize business strategy.
-This repository contains my graduate-level marketing analytics project completed in R using Quarto (.qmd).  
-And the analysis explores customer behavior and segmentation using techniques like PCA, K-Means, and KNN to extract business insights from marketing data.
-
-**Marketing Research Project - Starbucks Reward Program Optimization: **
- This project analyzes Starbucks' rewards program effectiveness and identifies opportunities to strengthen customer engagement through optimized promotional strategies. Using primary market research, the study evaluates consumer perceptions of the Starbucks Rewards system and provides data-driven recommendations for improving the promotion component of the marketing mix. 
+**What's Inside This Portfolio?** <br>
+Each project in the portfolio showcases a different skill, but they all have one thing in common: turning insights into action!
 
 ---
 
-##  Restuarant Project Overview
-**Course: University of Florida | Customer Analysis |**
+**Featured Projects**
+1. Uniscent Smart Deodorant: From Zero to Market Hero <br>
+The Challenge: Launch an AI-powered deodorant that doesn't exist yet in a $9B market <br>
+The Plot Twist: Men are really anxious about smelling bad (72% worry about their body scent!) <br>
+What I Did: <br>
 
-**Goal:**  
-- To analyze customer-level data to identify patterns, reduce dimensionality, and predict marketing outcomes for better targeting strategies.
+Identified a glaring market gap: No smart, personalized deodorant exists <br>
+Decoded consumer psychology: 48% cancel plans with friends over odor anxiety (yikes!) <br>
+Created a killer go-to-market strategy: Pop-up "scent labs" in gyms + viral TikTok challenges <br>
+Projected the numbers: $1.35M Year 1 revenue, 58% profit margin, break-even in 18 months <br>
 
-**Team Project 2: Customer Segmentation Analysis**
-- Focus: Identifying distinct customer groups through PCA and hierarchical clustering
-- Methods & Techniques:
--  Principal Component Analysis (PCA): Reduced 15 psychographic variables into 4 interpretable factors
-Factor 1: Food Quality & Diversity
-Factor 2: Service & Atmosphere Preferences
-Factor 3: Price & Portion Preferences
-Factor 4: Convenience & Casual Atmosphere
-
-Hierarchical Clustering: Segmented 200 customers into 6 distinct groups
-Validation: Bartlett's test, KMO (MSA = 0.66), Silhouette analysis (0.62)
-
-**Key Findings:**
-- Identified "Luxury Gourmets" segment (20% of market) as high-value target
-- High spenders with frequent dining habits across all quality dimensions
-- Customers near Ti Amo restaurant showed high income, fewer children
-
-**Strategic Recommendations:**
-- VIP memberships and loyalty programs for high-value customers
-- Premium positioning with elevated atmosphere
-- Adult-oriented dining experience (private seating, refined ambiance)
-- Moderate price increases justified by quality improvements
-Tools: R (psych, cluster, factoextra, dplyr, ggplot2)
-
-
-**Team Project 3: Restaurant Perceptual Mapping**
-Focus: Understanding competitive positioning and customer preferences through multidimensional scaling
-Methods & Techniques:
-- Multidimensional Scaling (MDS): Created perceptual maps of 12 restaurants across preference dimensions
-- Unfolding Analysis: Tested multiple configurations
-
-Interval vs. Ordinal scaling
-- Row vs. Matrix conditionality
-- Optimal model: Ordinal Scaling with Row Conditionality (lowest stress = 0.00596)
-
-
-Shepard Diagrams: Validated model fit quality
-- Stress Decomposition: Identified restaurants out of alignment with consumer preferences
-
-**Key Findings:**
-**Ti Amo** positioned strongly on atmosphere, libations, and location
-Three natural restaurant clusters emerged:
- - Premium group: Paramount Grill, The Top, Mildred's (high food quality + location)
- - Value group: Carrabbas, Las Margaritas, Shoney's (affordability + parking)
-`- Balanced group: Beef O'Bradys, Bistro 1245, The Swamp (moderate across dimensions)
-
- Customer segments identified by demographics:
-- High-income, fewer children cluster near premium restaurants
-- Customers 16, 20, 23, 30 prioritize food quality, seating, premium ambiance
-- Customer 11 has unique/mismatched preferences (no nearby restaurants)
-
-**Strategic Recommendations for Ti Amo:**
-- Target Sub-cluster (23, 30, 20, 16): High-income customers with fewer children
-- Enhance atmosphere: Modern décor, improved lighting, sophisticated environment
-- Increase prices moderately: Justified by premium ingredients and refined presentation
-**Adult-oriented positioning:**
-- Eliminate family-focused elements
-- Position as ideal for date nights, business meetings, sophisticated gatherings
-- Exclusive promotions for couples and small groups
-
-Tiered pricing strategy: Premium options + some affordable selections
-Demographic Insights:
-- Cluster 1: Fewer children, middle-to-high income, younger, high atmosphere preference
-- Cluster 2: High income, fewer children, high spending, strong atmosphere emphasis
-- Cluster 3: Low income, more children, younger, lower atmosphere priority
-- Sub-cluster (23,30,20,16): Incomes up to $125,000, few/no children, high profitability potential
-Tools: R (smacof for MDS, ggplot2 for visualization, factoextra)
-
-**Techniques Used:**
--  **Principal Component Analysis (PCA)** — to reduce feature complexity and visualize data structure  
--  **K-Means Clustering** — to identify distinct customer groups  
--  **K-Nearest Neighbors (KNN)** — to predict customer response or purchase behavior
-
-**Statistical Methods:**
-
-Principal Component Analysis (PCA)
-Factor Analysis with Varimax Rotation
-Hierarchical Clustering (Complete Linkage, Euclidean Distance)
-Multidimensional Scaling (MDS)
-Unfolding Analysis (Interval/Ordinal, Row/Matrix Conditionality)
-Validation Techniques:
-
-Bartlett's Test of Sphericity
-Kaiser-Meyer-Olkin (KMO) Test
-Silhouette Analysis
-Stress Decomposition
-Shepard Diagrams
-Elbow Method for cluster determination
-
-**Tools & Libraries:**
-
-R: psych, cluster, factoextra, dplyr, ggplot2, smacof
-Output Formats: PDF reports with comprehensive visualizations
-
-**Analysis Types:**
-
-Segmentation analysis
-Perceptual mapping
-Demographic profiling
-Competitive positioning
-Preference modeling
+Competitive Advantage: <br>
+Combined tech innovation (AI body odor analysis) with experiential marketing (gym takeovers) and community building (#FreshnessGlowUp). Most importantly, made it eco-friendly for the target audience. <br>
+Marketing Strategies: Partnered with athletes, created a drag-and-drop scent customization app, and designed a loyalty program with actual rewards people want. <br>
+Skills Flexed: Market research • Brand positioning • Launch strategy • Financial forecasting • Consumer psychology • Omnichannel planning <br>
 
 ---
+2. Restaurant Analytics: Where Data Meets Delicious <br> 
+Two-part series on understanding what makes diners choose one restaurant over another <br>
+Part I: The Luxury Gourmet Chronicles <br>
+Mission: Find the customers worth fighting for <br>
+I took 200 restaurant customers and 15 variables about their preferences and used PCA to distill them down to what actually matters: <br>
 
-## Key Insights
-- PCA reduced the dataset from 15+ variables to a few key behavioral components that explained over **80% of variance**.  
-- K-Means identified **4 distinct customer segments** differing by purchase frequency and engagement level.  
-- KNN achieved an accuracy of **~80%** in predicting customer response.  
-- Results can help tailor **targeted marketing campaigns** and **customer retention strategies**.
+- Food Quality & Diversity (obviously)
+- Service & Atmosphere (the vibe check)
+- Price & Portion (the wallet reality)
+- Convenience & Casual Atmosphere (the "I'm in sweats" factor)
 
----
+Then I applied hierarchical clustering on them and discovered... <br>
+The "Luxury Gourmets" (20% of customers, 80% of the dream) <br>
 
-##  Business Impact
-Both projects demonstrate ability to:
+- High income, no kids, impeccable taste
+- Will pay premium prices for premium experiences
+- Basically the customers every restaurant wants to clone
 
-Extract actionable insights from complex customer data
-Identify high-value customer segments for targeted marketing
-Optimize positioning strategy based on competitive landscape
-Translate statistical findings into concrete business recommendations
-Validate analytical choices using rigorous statistical tests
-Balance technical rigor with practical business application  
+The Go-To-Market Strategies:
 
-**Key Outcomes:**
+- VIP programs for high-spenders (make them feel special, they'll come back)
+- Ditch the kids' menu (seriously, this segment doesn't need it)
+- Upscale the atmosphere (think date night, not family night)
+- Raise prices 10-15% (they won't flinch if quality matches)
 
-- Identified 20% high-value "Luxury Gourmets" segment representing significant revenue opportunity
-- Mapped Ti Amo's competitive position relative to 11 competitors
-- Discovered underserved customer segment (customers 23,30,20,16) with $125K income potential
-- Provided specific, actionable strategies for atmosphere enhancement, pricing, and positioning
----
+Stats: KMO = 0.66, Silhouette Score = 0.62, Validation = TRUE <br>
 
-##  Visualization Examples
-The report includes:
-- PCA scree plots showing explained variance  
-- Cluster visualizations of customer segments  
-- KNN confusion matrix and accuracy metrics  
+Part II: Perceptual Mapping: The Restaurant Positioning <br>
+Mission: Figure out where Ti Amo stands among 12 competitors <br>
+I used Multidimensional Scaling (MDS) to create a "map" of the restaurant landscape based on customer perceptions. Think Google Maps, but for food preferences. <br>
+What I Found:<br>
 
----
+Three customr profiles emerged:
 
-## Business Strategy
-- High-value clusters can be prioritized for loyalty programs.  
-- Dormant clusters suggest re-engagement opportunities via personalized campaigns.  
-- Feature reduction (via PCA) improved model interpretability and reduced noise.
+- Premium Squad: High quality + great location (Paramount Grill, The Top, Mildred's)
+- Value Seekers: Affordable + good parking (Carrabbas, Las Margaritas, Shoney's)
+- The Balanced Middle: Moderate everything (Beef O'Bradys, Bistro 1245) <br>
 
----
-## Marketing Research Project Overview
 
-## Skills Demonstrated
-Market Research:
 
-- Survey design and questionnaire development
-- Likert scale and semantic differential measurement
-- Ranking and constant-sum scaling
-- Conjoint-style preference analysis
+Ti Amo's Position: Strong on atmosphere, libations, and location—but missing a key segment! <br>
+The Golden Opportunity: <br>
+Found Customer Cluster 23, 30, 20, 16—high-income folks with no kids who want sophisticated dining but aren't fully served by current positioning. <br>
+My Marketing Strategies: <br>
 
-## Data Analysis:
+- Reposition as adult-only: Date nights, business dinners, sophisticated gatherings
+- Upgrade the vibe: Modern décor, mood lighting, refined presentation
+- Tiered pricing: Premium options with some affordable picks
+- Target marketing: Go after that $125K income segment
 
-- Excel pivot tables and formulas
-- Cross-tabulation
-- Satisfaction indexing
-- Preference scoring
-
-## Strategic Marketing:
-
-- 4Ps framework application
-- Customer segmentation
-- Competitive positioning analysis
-- Data-driven recommendation development
-- Research Design Features
-
-## Question Types Employed:
-
-- Likert Scales: Familiarity, satisfaction, likelihood measures
-- Ranking Questions: Brand preference, ordering method preference
-- Constant-Sum Allocation: Coffee attribute importance (100 points)
-- Semantic Differential: Starbucks attribute evaluation
-- Hypothetical Scenarios: Bonus star impact, enhanced earning rates
-- Multiple Choice: Demographics, redemption preferences
-
-## Measurement Rigor:
-
-- Balanced scale anchors
-- Comprehensive attribute coverage
-- Scenario-based preference elicitation
-- Multiple measurement methods for triangulation
-
+Optimal Model: Ordinal Scaling + Row Conditionality (stress = 0.00596—basically perfect fit) <br>
+Skills Flexed: MDS • Unfolding analysis • Competitive positioning • Shepard diagrams • Strategic targeting <br>
 
 ---
+3. Starbucks Rewards: Making Loyalty Actually Rewarding <br/>
+The Quest: Figure out how to make Starbucks' rewards program even more addictive <br/>
+What I Did: <br/>
 
- ## ✍️ Author
-Anni Liu
-Marketing Analytics | R & Python & Excel | Customer Segmentation & Perceptual Mapping & Statistical Analysis 
+Designed a comprehensive survey with all the fancy question types: <br/>
 
-_Transforming customer data into strategic business insights_
+- Likert scales (how much do you love us?)
+- Ranking questions (what do you really want?)
+- Constant-sum allocation (you have 100 points—spend wisely)
+- Semantic differentials (rate us on ALL the things)
+- Hypothetical scenarios (what if we doubled the stars?)
+
+
+The Analysis: <br/>
+
+- Real Collected data in Excel 
+- Cross-tabbed satisfaction scores with redemption behaviors
+- Indexed preferences to find what actually drives loyalty
+- Applied the 4Ps framework to build actionable recommendations
+
+The Insight: Not all rewards are created equal—customers value certain perks way more than others, and the program wasn't optimizing for those preferences. <br/>
+Business Impact: Identified specific changes to the promotion mix that could boost engagement without increasing costs. <br/>
+Skills Flexed: Survey design • Primary research • Excel wizardry • Market research frameworks • Customer segmentation <br/>
+
+----
+My Analytics Tools <br>
+ 
+R: statistical modeling (psych, cluster, factoextra, ggplot2, smacof) My Analytics Toolkit <br>
+When I Code: <br>
+Python: pandas, scikit-learn, and matplotlib <br>
+Excel: pivot tables, Advanced formulas, data viz, automation <br>
+
+Statistical Methods Used: <br>
+
+Dimensionality Reduction: PCA, Factor Analysis  <br>
+Clustering : K-Means, Hierarchical Clustering  <br>
+Predictive Modeling: KNN, Regression Analysis  <br>
+Perceptual Mapping: MDS, Unfolding Analysis  <br>
+Validation Techniques: KMO, Bartlett's, Silhouette, Shepard diagrams  <br>
+
+---
+Marketing Knowlege Application: <br>
+
+Market segmentation   <br>
+Consumer psychology application   <br>
+Financial modeling and forecasting  <br>
+Multi-channel strategy development<br>
+Competitive analysis <br>
+Data visualization <br>
+
  
