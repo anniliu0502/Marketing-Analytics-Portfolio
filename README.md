@@ -44,7 +44,7 @@ I took 200 restaurant customers and 15 variables about their preferences and use
 - Convenience & Casual Atmosphere (the "I'm in sweats" factor)
 
 Then I applied hierarchical clustering on them and discovered... <br>
-The "Luxury Gourmets" (20% of customers, 80% of the dream) <br>
+The "Luxury Gourmets"! <br>
 
 - High income, no kids, impeccable taste
 - Will pay premium prices for premium experiences
