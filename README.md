@@ -38,10 +38,10 @@ Part I: The Luxury Gourmet Chronicles <br>
 Mission: Find the customers worth fighting for <br>
 I took 200 restaurant customers and 15 variables about their preferences and used PCA to distill them down to what actually matters: <br>
 
-- Food Quality & Diversity (obviously)
-- Service & Atmosphere (the vibe check)
-- Price & Portion (the wallet reality)
-- Convenience & Casual Atmosphere (the "I'm in sweats" factor)
+- Food Quality & Diversity 
+- Service & Atmosphere 
+- Price & Portion 
+- Convenience & Casual Atmosphere 
 
 Then I applied hierarchical clustering on them and discovered... <br>
 The "Luxury Gourmets"! <br>
