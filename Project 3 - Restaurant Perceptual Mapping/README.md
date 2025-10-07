@@ -3,11 +3,12 @@ Advanced MDS analysis to map competitive landscape and identify strategic positi
 ---
 
 **Project Overview**
-This project uses Multidimensional Scaling (MDS) and Unfolding Analysis to create perceptual maps of 12 competing restaurants, revealing how customers perceive brands across key dining attributes and identifying optimal positioning strategies for Ti Amo restaurant.
+This project uses Multidimensional Scaling (MDS) and Unfolding Analysis to create perceptual maps of 12 competing restaurants, revealing how customers perceive brands across key dining attributes and identifying optimal positioning strategies for Ti Amo restaurant. <br/>
+
 ---
 
-**Business Objective**
-Map the competitive restaurant landscape to:
+**Business Objective** <br/>
+Map the competitive restaurant landscape to: <br/>
 - Understand how Ti Amo is positioned relative to 11 competitors
 - Identify customer segments with unmet needs
 - Develop data-driven repositioning strategy
