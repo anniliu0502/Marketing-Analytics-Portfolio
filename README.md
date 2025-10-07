@@ -36,7 +36,7 @@ From consumer insights to product storytelling, I love uncovering what drives re
 
 ---
 
-### 🍽 Project 3: Starbucks Reward Program Optimization 
+### ☕ Project 3: Starbucks Reward Program Optimization 
 **Goal:** Analyze how Starbucks can improve its in-App Promotions to reduce customer retention rate. 
 **What I Did:**  
 - Designed survey and distrubute it to target audience.
