@@ -3,8 +3,7 @@
 
 Hi there! I’m Anni.  
 I believe the best business decisions are backed by **data, creativity, and empathy**.  
-From consumer insights to product storytelling, I love uncovering what drives real business results —  
-finding patterns where others see noise, and turning insights into actions that matter.
+From consumer insights to product storytelling, I love uncovering what drives real business results: finding patterns where others see noise, and turning insights into actions that matter.
 
 ---
 
