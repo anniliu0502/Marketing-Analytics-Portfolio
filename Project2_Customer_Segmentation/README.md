@@ -1,11 +1,11 @@
 # Restaurant Customer Segmentation Project
-# 👥 Customer Segmentation Project
+# Customer Segmentation Project
 
 This project applies PCA (Principal Component Analysis) and hierarchical clustering to segment restaurant customers and develop a targeted marketing strategy.
 
 ---
 
-## 🧠 Objective
+## Objective
 To identify distinct customer segments based on dining preferences, behaviors, and demographics to : 
 - guide menu development
 - service training
@@ -14,7 +14,7 @@ To identify distinct customer segments based on dining preferences, behaviors, a
 
 ---
 
-## 📊 Methods & Techniques
+## Methods & Techniques
 **Dataset 1: Psychographic Survey Analysis**
 PCA (Principal Component Analysis): Reduced 15 survey questions into 4 key factors
 Factor Rotation: Used varimax rotation to clarify factor interpretations
@@ -38,7 +38,7 @@ Cluster Validation:
 
 ---
 
-## 🧰 Tools
+## Tools
 - **Language**: R
 - **Visualization Tool**: Tableau 
 - **Libraries**: psych, cluster, factoextra, ggplot2, dplyr
@@ -47,7 +47,7 @@ Cluster Validation:
 
 ---
 
-## 💡 Key Insights
+## Key Insights
 **Four Psychographic Factors Identified:**
 - Food Quality & Diversity – Fresh ingredients, varied menu, specialty dishes
 - Service & Atmosphere – Staff attentiveness vs. preference for privacy
@@ -62,7 +62,7 @@ Cluster Validation:
 5. Selective Tasters (n=20) – Quality-focused but infrequent diners
 6. Fast & Frequent (n=10) – Convenience-driven, high frequency but low spending
 
-**🎯 Target Market Selection**
+**Target Market Selection**
 **Cluster 4: "Luxury Gourmets" selected as primary target based on:**
 - Highest spending power (Avg_Cost: +1.47 above mean)
 - Frequent dining habits (Lunch: +1.22, Dinner: +1.07 above average)
@@ -81,14 +81,14 @@ Larger party sizes (+0.69), indicating group dining and higher per-visit revenue
 -  Luxury brand collaborations
 ---
 
-## 📁 Files
+## Files
 - `TeamProject2Part1.qmd`, `TeamProject2Part2.qmd` → Full code and analysis  
 - `TeamProject2Part1.html`, `TeamProject2Part2.html` → Rendered interactive report
 - `TeamProject2_6clusters.twb` → Tableau visualization 
 - `Team Project 2.pdf`→ Full analysis report (19 pages), Statistical outputs and validation tests,  Correlation matrices and dendrograms, and   Cluster profiles and segment descriptions
 
 ---
-### ✍️ Author
+### Author
 **Anni Liu**  
 Course: | University of Florida | Customer Analysis | Dr. Alan Cooke | February 2025
 
