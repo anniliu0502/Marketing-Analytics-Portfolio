@@ -1,5 +1,5 @@
 <p align= "center">
-  <img src="https://github.com/anniliu0502/Marketing-Analytics-Portfolio/blob/ce32f0681d50cb116fc70a722513f861adea4446/Marketing%20Analytics%20Banner%20.png" alt= "Marketing Analytics Banner" width="90%" >
+  <img src="https://github.com/anniliu0502/Marketing-Analytics-Portfolio/blob/ce32f0681d50cb116fc70a722513f861adea4446/Marketing%20Analytics%20Banner%20.png"   width="100%" >
 </p>
 
 ## Marketing Analytics Portfolio  
