@@ -42,9 +42,10 @@ From consumer insights to product storytelling, I love uncovering what drives re
 - Designed survey and distrubute it to target audience.
 - Survey questions include attribution, willingness to pay, peceptions on comeptitors' brands.  
 - Analyzed real data by using Excel Pivot table and statistical methods   
-  
 
-  ---
+ **Tools/Methods:** Excel (Pivot Table), Chi-square, t-test, ANOVA
+
+---
 
 **Tools / Methods:** R (Factoextra, ggplot2, smacro), PCA, MDS, Survey Analysis  
 ## 🧰 My Analytics Toolkit
