@@ -1,12 +1,12 @@
-## 🗺️ Restaurant Perceptual Mapping & Competitive Positioning
+## Restaurant Perceptual Mapping & Competitive Positioning
 Advanced MDS analysis to map competitive landscape and identify strategic positioning opportunities
 ---
 
-**📊 Project Overview**
+**Project Overview**
 This project uses Multidimensional Scaling (MDS) and Unfolding Analysis to create perceptual maps of 12 competing restaurants, revealing how customers perceive brands across key dining attributes and identifying optimal positioning strategies for Ti Amo restaurant.
 ---
 
-**🎯 Business Objective**
+**Business Objective**
 Map the competitive restaurant landscape to:
 - Understand how Ti Amo is positioned relative to 11 competitors
 - Identify customer segments with unmet needs
@@ -15,7 +15,7 @@ Map the competitive restaurant landscape to:
 
 ---
 
-**🔬 Methodology**
+**Methodology**
 **Data Sources**
 - Restaurant Attributes: Location, Food Quality, Price, Atmosphere, Seating, Libations, Parking (7 dimensions)
 - Customer Preferences: 30 customers rating 12 restaurants
@@ -49,7 +49,7 @@ Map the competitive restaurant landscape to:
 
 ----
 
-**💡 Key Findings**
+**Key Findings**
 **Restaurant Clustering**
 - Three natural competitive groups emerged:
 **Premium Tier** (High food quality + location, Dimension 1)
@@ -115,7 +115,7 @@ Sub-cluster (3, 15, 13)
 - Difficult to satisfy regardless of offering
 
 ---
-**🎯 Strategic Recommendations for Ti Amo**
+**Strategic Recommendations for Ti Amo**
 - Target: Sub-cluster (23, 30, 20, 16)
 
 **Repositioning Strategy:**
@@ -154,7 +154,7 @@ Market as destination for:
 - Exclusive experiences (chef's table, tastings)
 
 --- 
-**📈 Visualization Highlights**
+**Visualization Highlights**
 **Perceptual Maps Created:**
 
 - Combined restaurant-customer preference map (Figure 9)
@@ -170,7 +170,7 @@ Market as destination for:
 
 ---
 
-**🧰 Technical Skills Demonstrated**
+**Technical Skills Demonstrated**
 **Advanced Techniques:**
 
 - Multidimensional Scaling (MDS)
@@ -193,7 +193,7 @@ Market as destination for:
 
 ---
 
-**📊 Expected Business Impact**
+**Expected Business Impact**
 
 **Revenue Opportunity:**
 
@@ -216,7 +216,7 @@ Market as destination for:
 - Demographic analysis reduces execution uncertainty
 
 ----
-**📁 Project Deliverables**
+**Project Deliverables**
 
 - 19-page comprehensive analysis report
 - Multiple perceptual maps with demographic overlays
@@ -225,7 +225,7 @@ Market as destination for:
 - Strategic recommendations with implementation roadmap
 
 ---
-✍️ Author
+**Author**
 Anni Liu
 | Univeristy of Florida | Customer Analysis | Instructor: Dr. Alan Cook | Feburary 2025 
 
