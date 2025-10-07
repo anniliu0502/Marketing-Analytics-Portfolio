@@ -14,26 +14,30 @@ Each project in the portfolio showcases a different skill, but they all have one
 ---
 
 **Featured Projects** <br>
-1. Uniscent Smart Deodorant: From Zero to Market Hero <br>
+Uniscent Smart Deodorant: From Zero to Market Hero <br>
 
 The Challenge: Launch an AI-powered deodorant that doesn't exist yet in a $9B market <br>
 The Plot Twist: Men are really anxious about smelling bad (72% worry about their body scent!) <br>
 
 What I Did: <br>
+
 - Identified a glaring market gap: No smart, personalized deodorant exists <br>
 - Decoded consumer psychology: 48% cancel plans with friends over odor anxiety (yikes!) <br>
 - Created a killer go-to-market strategy: Pop-up "scent labs" in gyms + viral TikTok challenges <br>
 - Projected the numbers: $1.35M Year 1 revenue, 58% profit margin, break-even in 18 months <br>
 
 Competitive Advantage: <br>
+
 Combined tech innovation (AI body odor analysis) with experiential marketing (gym takeovers) and community building (#FreshnessGlowUp). Most importantly, made it eco-friendly for the target audience. <br>
 
 Marketing Strategies: Partnered with athletes, created a drag-and-drop scent customization app, and designed a loyalty program with actual rewards people want. <br>
+
 Skills Flexed: Market research • Brand positioning • Launch strategy • Financial forecasting • Consumer psychology • Omnichannel planning <br>
 
 ---
-2. Restaurant Analytics: Where Data Meets Delicious <br> 
+Restaurant Analytics: Where Data Meets Delicious <br> 
 - Two-part series on understanding what makes diners choose one restaurant over another <br>
+
 Part I: The Luxury Gourmet Chronicles <br>
 Mission: Find the customers worth fighting for <br>
 I took 200 restaurant customers and 15 variables about their preferences and used PCA to distill them down to what actually matters: <br>
@@ -86,7 +90,7 @@ Optimal Model: Ordinal Scaling + Row Conditionality (stress = 0.00596—basicall
 Skills Flexed: MDS • Unfolding analysis • Competitive positioning • Shepard diagrams • Strategic targeting <br>
 
 ---
-3. Starbucks Rewards: Making Loyalty Actually Rewarding <br/>
+Starbucks Rewards: Making Loyalty Actually Rewarding <br/>
 The Quest: Figure out how to make Starbucks' rewards program acquire more customers. <br/>
 What I Did: <br/>
 
@@ -114,7 +118,6 @@ Skills Flexed: Survey design • Primary research • Excel wizardry • Market 
 My Analytics Tools <br>
  
 R: statistical modeling (psych, cluster, factoextra, ggplot2, smacof) My Analytics Toolkit <br>
-When I Code: <br>
 Python: pandas, scikit-learn, and matplotlib <br>
 Excel: pivot tables, Advanced formulas, data viz, automation <br>
 
