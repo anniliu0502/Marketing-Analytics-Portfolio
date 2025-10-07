@@ -1,6 +1,7 @@
 <p align= "center">
   <img src= "https://github.com/anniliu0502/Marketing-Analytics-Portfolio/blob/1b3d40960a73a5131539d545d430d1263bc0b3a9/Digital%20Marketing%20Agency%20Banner.png" alt= "Marketing Analytics Banner" width="100%">
-#  Marketing Analytics Portfolio  
+
+  ## Marketing Analytics Portfolio  
 *Turning data and curiosity into marketing magic.*
 
 Hi there! I’m Anni.  
