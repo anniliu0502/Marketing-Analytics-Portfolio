@@ -4,7 +4,7 @@ _Turning data, and curiosity into marketing magic_  <br>
 
 I'm a Marketing Analytics grad who believes the best business decisions are backed by data, creativity, and a dash of strategic thinking. Whether it's predicting what makes customers tick or launching the next viral product, I love diving into the numbers to tell compelling stories. <br>
 
-**What I do:** Transform messy data into "aha!" moments that drive real business results. <br>
+**What I do:** Transform messy data into insights that drive real business results. <br>
 **What drives me:** The excitement of finding patterns where others see noise, and creating strategies that actually work. <br>
 
 ---
@@ -87,10 +87,10 @@ Skills Flexed: MDS • Unfolding analysis • Competitive positioning • Shepar
 
 ---
 3. Starbucks Rewards: Making Loyalty Actually Rewarding <br/>
-The Quest: Figure out how to make Starbucks' rewards program even more addictive <br/>
+The Quest: Figure out how to make Starbucks' rewards program acquire more customers. <br/>
 What I Did: <br/>
 
-Designed a comprehensive survey with all the fancy question types: <br/>
+Designed a comprehensive survey with all the professional question types: <br/>
 
 - Likert scales (how much do you love us?)
 - Ranking questions (what do you really want?)
