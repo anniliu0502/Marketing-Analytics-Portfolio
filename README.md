@@ -22,7 +22,7 @@ From consumer insights to product storytelling, I love uncovering what drives re
 ---
 
 ### 🍽 Project 2: Restaurant Analytics — *Where Data Meets Decision*  
-**Goal:** Identify what drives customers to choose one restaurant over another.  
+**Goal:** Identify what drives customers to choose one restaurant over another.  <br>
 **What I Did:**  
 - Analyzed customer perception & preference data.  
 - Conducted exploratory data analysis using PCA and MDS to segment diners.  
@@ -46,7 +46,7 @@ From consumer insights to product storytelling, I love uncovering what drives re
 ## 🧰 My Analytics Toolkit
 - **Statistical Modeling:** regression, clustering, factor analysis  
 - **Data Visualization:** R (ggplot2, smacro), Excel dashboards, Canva infographics  
-- **Automation:** Excel pivot tables, Advanced formulas, VBA automation  
+- **Automation:** Excel pivot tables, Advanced formulas 
 - **Software:** Python (NumPy, pandas), SQL (basic querying), Qualtrics, Photoshop  
 
 ---
