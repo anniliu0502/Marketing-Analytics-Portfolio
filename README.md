@@ -1,148 +1,75 @@
-## Marketing Analytics Portfolio <br>
-Hi there! I'm Anni! <br>
-_Turning data, and curiosity into marketing magic_  <br>
+#  Marketing Analytics Portfolio  
+*Turning data and curiosity into marketing magic.*
 
-I'm a Marketing Analytics grad who believes the best business decisions are backed by data, creativity, and a dash of strategic thinking. Whether it's predicting what makes customers tick or launching the next viral product, I love diving into the numbers to tell compelling stories. <br>
-
-**What I do:** Transform messy data into insights that drive real business results. <br>
-**What drives me:** The excitement of finding patterns where others see noise, and creating strategies that actually work. <br>
-
----
-**What's Inside This Portfolio?** <br>
-Each project in the portfolio showcases a different skill, but they all have one thing in common: turning insights into action! <br>
+Hi there! I’m Anni.  
+I believe the best business decisions are backed by **data, creativity, and empathy**.  
+From consumer insights to product storytelling, I love uncovering what drives real business results —  
+finding patterns where others see noise, and turning insights into actions that matter.
 
 ---
 
-## Featured Projects <br>
-**Uniscent Smart Deodorant:** From Zero to Market Hero <br>
+## 🧠 Featured Projects
 
-The Challenge: Launch an AI-powered deodorant that doesn't exist yet in a $9B market <br>
-The Plot Twist: Men are really anxious about smelling bad (72% worry about their body scent!) <br>
+### 🧴 Project 1: Personalized Deodorant Launch  
+**The Challenge:** Launch an AI-powered deodorant brand in a $3B market with high consumer anxiety about body odor specifically for men.  
+**What I Did:**  
+- Identified a growing market gap (no personalized product existed).  
+- Designed customer segments using consumer psychology & behavioral data.  
+- Created viral campaign strategy via TikTok challenges and micro-influencer activation.  
+- Projected $3.15M in first-year revenue with 58% profit margin (break-even in 8 months).  
 
-What I Did: <br>
-
-- Identified a glaring market gap: No smart, personalized deodorant exists <br>
-- Decoded consumer psychology: 48% cancel plans with friends over odor anxiety (yikes!) <br>
-- Created a killer go-to-market strategy: Pop-up "scent labs" in gyms + viral TikTok challenges <br>
-- Projected the numbers: $1.35M Year 1 revenue, 58% profit margin, break-even in 18 months <br>
-
-Competitive Advantage: <br>
-
-Combined tech innovation (AI body odor analysis) with experiential marketing (gym takeovers) and community building (#FreshnessGlowUp). Most importantly, made it eco-friendly for the target audience. <br>
-
-Marketing Strategies: Partnered with athletes, created a drag-and-drop scent customization app, and designed a loyalty program with actual rewards people want. <br>
-
-Skills Flexed: Market research • Brand positioning • Launch strategy • Financial forecasting • Consumer psychology • Omnichannel planning <br>
+**Tools / Methods:** Consumer Psychology, Market Segmentation, ROI Forecasting  
 
 ---
-**Restaurant Analytics:** Where Data Meets Delicious <br> 
-- Two-part series on understanding what makes diners choose one restaurant over another <br>
 
-Part I: The Luxury Gourmet Chronicles <br>
-Mission: Find the customers who generate most the profit.  <br>
-I took 200 restaurant customers and 15 variables about their preferences and used PCA to distill them down to what actually matters: <br>
+### 🍽 Project 2: Restaurant Analytics — *Where Data Meets Decision*  
+**Goal:** Identify what drives customers to choose one restaurant over another.  
+**What I Did:**  
+- Analyzed customer perception & preference data.  
+- Conducted exploratory data analysis using PCA and MDS to segment diners.  
+- Visualized insights in R (ggplot2) to support strategic pricing and menu design.  
 
-- Food Quality & Diversity 
-- Service & Atmosphere 
-- Price & Portion 
-- Convenience & Casual Atmosphere 
-
-Then I applied hierarchical clustering on them and discovered... <br>
-The "Luxury Gourmets"! <br>
-
-- High income, no kids, impeccable taste
-- Will pay premium prices for premium experiences
-- Basically the customers every restaurant wants to clone
-
-The Go-To-Market Strategies:
-
-- VIP programs for high-spenders (make them feel special, they'll come back)
-- Ditch the kids' menu (fine dining vibe)
-- Upscale the atmosphere (think date night, not family night)
-- Raise prices 10-15% (they won't flinch if quality matches)
-
-Stats: KMO = 0.66, Silhouette Score = 0.62, Validation = TRUE <br>
-
-Part II: Perceptual Mapping: The Restaurant Positioning <br>
-Mission: Figure out where Ti Amo stands among 12 competitors <br>
-I used Multidimensional Scaling (MDS) to create a "map" of the restaurant landscape based on customer perceptions. Think Google Maps, but for food preferences. <br>
-What I Found:<br>
-
-Three customr profiles emerged: <br>
-
-- Premium Squad: High quality + great location (Paramount Grill, The Top, Mildred's)
-- Value Seekers: Affordable + good parking (Carrabbas, Las Margaritas, Shoney's)
-- The Balanced Middle: Moderate everything (Beef O'Bradys, Bistro 1245) <br>
-
-
-
-Ti Amo's Position: Strong on atmosphere, libations, and location—but missing a key segment! <br>
-The Golden Opportunity: <br>
-Found Customer Cluster 23, 30, 20, 16—high-income folks with no kids who want sophisticated dining but aren't fully served by current positioning. <br/>
-My Marketing Strategies: <br>
-
-- Reposition as adult-only: Date nights, business dinners, sophisticated gatherings
-- Upgrade the vibe: Modern décor, mood lighting, refined presentation
-- Tiered pricing: Premium options with some affordable picks
-- Target marketing: Go after that $125K income segment
-
-Optimal Model: Ordinal Scaling + Row Conditionality (stress = 0.00596—basically perfect fit) <br>
-Skills Flexed: MDS • Unfolding analysis • Competitive positioning • Shepard diagrams • Strategic targeting <br>
+**Tools / Methods:** R (Factoextra, ggplot2, smacro), PCA, MDS, Survey Analysis  
 
 ---
-**Starbucks Rewards:** Making Loyalty Actually Rewarding <br/>
-The Quest: Figure out how to make Starbucks' rewards program acquire more customers. <br/>
-What I Did: <br/>
 
-Designed a comprehensive survey with all the professional question types: <br/>
+### 🍽 Project 3: Starbucks Reward Program Optimization 
+**Goal:** Analyze how Starbucks can improve its in-App Promotions to reduce customer retention rate 
+**What I Did:**  
+- Designed survey and distrubute it to target audience.
+- Survey questions include attribution, willingness to pay, peceptions on comeptitors' brands.  
+- Analyzed real data by using Excel Pivot table and statistical methods   
+  
 
-- Likert scales (how much do you love us?)
-- Ranking questions (what do you really want?)
-- Constant-sum allocation (you have 100 points—spend wisely)
-- Semantic differentials (rate us on ALL the things)
-- Hypothetical scenarios (what if we doubled the stars?)
+  ---
 
-
-The Analysis: <br/>
-
-- Real Collected data in Excel 
-- Cross-tabbed satisfaction scores with redemption behaviors
-- Indexed preferences to find what actually drives loyalty
-- Applied the 4Ps framework to build actionable recommendations
-
-The Insight: Not all rewards are created equal—customers value certain perks way more than others, and the program wasn't optimizing for those preferences. <br/>
-Business Impact: Identified specific changes to the promotion mix that could boost engagement without increasing costs. <br/>
-Skills Flexed: Survey design • Primary research • Excel wizardry • Market research frameworks • Customer segmentation <br/>
-
-----
-My Analytics Tools <br>
- 
-R: statistical modeling (psych, cluster, factoextra, ggplot2, smacof) My Analytics Toolkit <br>
-Python: pandas, scikit-learn, and matplotlib <br>
-Excel: pivot tables, Advanced formulas, data viz, automation <br>
-
-Statistical Methods Used: <br>
-
-Dimensionality Reduction: PCA, Factor Analysis  <br>
-Clustering : K-Means, Hierarchical Clustering  <br>
-Predictive Modeling: KNN, Regression Analysis  <br>
-Perceptual Mapping: MDS, Unfolding Analysis  <br>
-Validation Techniques: KMO, Bartlett's, Silhouette, Shepard diagrams  <br>
+**Tools / Methods:** R (Factoextra, ggplot2, smacro), PCA, MDS, Survey Analysis  
+## 🧰 My Analytics Toolkit
+- **Statistical Modeling:** regression, clustering, factor analysis  
+- **Data Visualization:** R (ggplot2, smacro), Excel dashboards, Canva infographics  
+- **Automation:** Excel pivot tables, Advanced formulas, VBA automation  
+- **Software:** Python (NumPy, pandas), SQL (basic querying), Qualtrics, Photoshop  
 
 ---
-Marketing Knowlege Application: <br>
 
-Market segmentation   <br>
-Consumer psychology application   <br>
-Financial modeling and forecasting  <br>
-Multi-channel strategy development<br>
-Competitive analysis <br>
-Data visualization <br>
+## 🧩 Marketing Knowledge Applications
+- Consumer Psychology & Segmentation  
+- Market Research & Brand Positioning  
+- Campaign Performance Analysis  
+- Strategy Planning & Business Forecasting  
+
+---
+
+## ⚙️ Tech Stack
+![R](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-003B57?logo=database&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?logo=tableau&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?logo=microsoft-excel&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?logo=canva&logoColor=white)
+![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26?logo=adobe-creative-cloud&logoColor=white)
+
+---
 
 
-----
-
-
-# Tech Stack:
-![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26.svg?style=for-the-badge&logo=Adobe%20Creative%20Cloud&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
  
