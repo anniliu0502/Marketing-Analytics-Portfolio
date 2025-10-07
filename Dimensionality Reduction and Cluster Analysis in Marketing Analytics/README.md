@@ -86,29 +86,25 @@ Computed cluster sizes and mean responses for each segment: <br/>
 
 Part C: Segment Profiles <br/>
 Segment 0: Trend Enthusiasts <br/>
-
-Positive attitudes across most aspects with particularly strong interest in trendiness, fashion, and making a statement through vehicle choice. Value cars as expressions of personal style. 
+- Positive attitudes across most aspects with particularly strong interest in trendiness, fashion, and making a statement through vehicle choice. Value cars as expressions of personal style. 
 
 Segment 1: Discontented Respondents <br/>
-
-Generally negative perceptions across all car attributes and features. Least satisfied segment showing low engagement with both functional and emotional aspects of car ownership. <br/>
+- Generally negative perceptions across all car attributes and features. Least satisfied segment showing low engagement with both functional and emotional aspects of car ownership. <br/>
 
 Segment 2: Price-Sensitive Critics
-
-Highly price-conscious with critical attitudes toward most car features. Show some interest in style and trendiness (Q9-Q12) but prioritize affordability over other attributes. <br/>
+- Highly price-conscious with critical attitudes toward most car features. Show some interest in style and trendiness (Q9-Q12) but prioritize affordability over other attributes. <br/>
 
 Segment 3: Enthusiastic Supporters
-
-Strong enthusiasm for functional features, quality, performance, and driving experience (Q1-Q8). Less concerned with trendiness and fashion (Q9-Q12), prioritizing substance over style. <br/>
+- Strong enthusiasm for functional features, quality, performance, and driving experience (Q1-Q8). Less concerned with trendiness and fashion (Q9-Q12), prioritizing substance over style. <br/>
 
 Part D: Factor Analysis
 Dimensionality Reduction Through Factor Analysis: <br/>
+- Applied to Q1-Q17 (excluding Ideal_Price)
 
-Applied to Q1-Q17 (excluding Ideal_Price)
 Selected 3 factors based on:
 
-Explained variance analysis
-Scree plot elbow method
+- Explained variance analysis
+- Scree plot elbow method
 
 
 **Applied Varimax rotation for interpretability** <br/>
