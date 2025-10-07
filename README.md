@@ -9,12 +9,12 @@ I'm a Marketing Analytics grad who believes the best business decisions are back
 
 ---
 **What's Inside This Portfolio?** <br>
-Each project in the portfolio showcases a different skill, but they all have one thing in common: turning insights into action!
+Each project in the portfolio showcases a different skill, but they all have one thing in common: turning insights into action! <br>
 
 ---
 
-**Featured Projects** <br>
-Uniscent Smart Deodorant: From Zero to Market Hero <br>
+## Featured Projects <br>
+**Uniscent Smart Deodorant:** From Zero to Market Hero <br>
 
 The Challenge: Launch an AI-powered deodorant that doesn't exist yet in a $9B market <br>
 The Plot Twist: Men are really anxious about smelling bad (72% worry about their body scent!) <br>
@@ -35,11 +35,11 @@ Marketing Strategies: Partnered with athletes, created a drag-and-drop scent cus
 Skills Flexed: Market research • Brand positioning • Launch strategy • Financial forecasting • Consumer psychology • Omnichannel planning <br>
 
 ---
-Restaurant Analytics: Where Data Meets Delicious <br> 
+**Restaurant Analytics:** Where Data Meets Delicious <br> 
 - Two-part series on understanding what makes diners choose one restaurant over another <br>
 
 Part I: The Luxury Gourmet Chronicles <br>
-Mission: Find the customers worth fighting for <br>
+Mission: Find the customers who generate most the profit.  <br>
 I took 200 restaurant customers and 15 variables about their preferences and used PCA to distill them down to what actually matters: <br>
 
 - Food Quality & Diversity 
@@ -57,7 +57,7 @@ The "Luxury Gourmets"! <br>
 The Go-To-Market Strategies:
 
 - VIP programs for high-spenders (make them feel special, they'll come back)
-- Ditch the kids' menu (seriously, this segment doesn't need it)
+- Ditch the kids' menu (fine dining vibe)
 - Upscale the atmosphere (think date night, not family night)
 - Raise prices 10-15% (they won't flinch if quality matches)
 
@@ -68,7 +68,7 @@ Mission: Figure out where Ti Amo stands among 12 competitors <br>
 I used Multidimensional Scaling (MDS) to create a "map" of the restaurant landscape based on customer perceptions. Think Google Maps, but for food preferences. <br>
 What I Found:<br>
 
-Three customr profiles emerged:
+Three customr profiles emerged: <br>
 
 - Premium Squad: High quality + great location (Paramount Grill, The Top, Mildred's)
 - Value Seekers: Affordable + good parking (Carrabbas, Las Margaritas, Shoney's)
@@ -78,7 +78,7 @@ Three customr profiles emerged:
 
 Ti Amo's Position: Strong on atmosphere, libations, and location—but missing a key segment! <br>
 The Golden Opportunity: <br>
-Found Customer Cluster 23, 30, 20, 16—high-income folks with no kids who want sophisticated dining but aren't fully served by current positioning. <br>
+Found Customer Cluster 23, 30, 20, 16—high-income folks with no kids who want sophisticated dining but aren't fully served by current positioning. <br/>
 My Marketing Strategies: <br>
 
 - Reposition as adult-only: Date nights, business dinners, sophisticated gatherings
@@ -90,7 +90,7 @@ Optimal Model: Ordinal Scaling + Row Conditionality (stress = 0.00596—basicall
 Skills Flexed: MDS • Unfolding analysis • Competitive positioning • Shepard diagrams • Strategic targeting <br>
 
 ---
-Starbucks Rewards: Making Loyalty Actually Rewarding <br/>
+**Starbucks Rewards:** Making Loyalty Actually Rewarding <br/>
 The Quest: Figure out how to make Starbucks' rewards program acquire more customers. <br/>
 What I Did: <br/>
 
