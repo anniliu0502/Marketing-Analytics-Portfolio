@@ -5,12 +5,12 @@ This marketing Campaign contains a comprehensive marketing analysis and launch s
 **Brand Positioning:** _"Your Scent, Your Signature"_ - Smart, personalized, and sustainable deodorant solutions for the modern man.
 
 ----
-**Key Highlights**
-Market Opportunity: $9B+ men's deodorant market with 18% of total grooming sales <bn/>
-Target Audience: Gen Z men (16-35 years old) - active, social, gym-goers <bn/>
-Projected Revenue: $1.35M by Year 1 with 58% profit margin <bn/>
-Break-Even: 1.5-2 years <bn/>
-Retail Price: $35 <bn/>
+**Key Highlights** <br>
+Market Opportunity: $9B+ men's deodorant market with 18% of total grooming sales <br>
+Target Audience: Gen Z men (16-35 years old) - active, social, gym-goers <br>
+Projected Revenue: $1.35M by Year 1 with 58% profit margin <br>
+Break-Even: 1.5-2 years <br>
+Retail Price: $35 <br>
 
 ---
 
