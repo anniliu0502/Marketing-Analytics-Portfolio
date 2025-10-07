@@ -21,7 +21,7 @@ Factor Rotation: Used varimax rotation to clarify factor interpretations <br/>
 Validation: Bartlett's test (p < 0.001) and KMO test (MSA = 0.66) confirmed data suitability <br/>
 Variance Explained: Four factors captured 50.7% of total variance <br/>
 
-**Dataset 2: Customer Clustering**
+**Dataset 2: Customer Clustering** <br/>
 Data Standardization: Normalized variables on different scales (1-5, 1-7, 1-8) <br/>
 Hierarchical Clustering: Complete linkage method with Euclidean distance <br/>
 Cluster Validation: <br/>
