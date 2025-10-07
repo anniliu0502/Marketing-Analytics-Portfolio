@@ -15,23 +15,23 @@ To identify distinct customer segments based on dining preferences, behaviors, a
 ---
 
 ## Methods & Techniques
-**Dataset 1: Psychographic Survey Analysis**
-PCA (Principal Component Analysis): Reduced 15 survey questions into 4 key factors
-Factor Rotation: Used varimax rotation to clarify factor interpretations
-Validation: Bartlett's test (p < 0.001) and KMO test (MSA = 0.66) confirmed data suitability
-Variance Explained: Four factors captured 50.7% of total variance
+**Dataset 1: Psychographic Survey Analysis** <br/>
+PCA (Principal Component Analysis): Reduced 15 survey questions into 4 key factors <br/>
+Factor Rotation: Used varimax rotation to clarify factor interpretations <br/>
+Validation: Bartlett's test (p < 0.001) and KMO test (MSA = 0.66) confirmed data suitability <br/>
+Variance Explained: Four factors captured 50.7% of total variance <br/>
 
 **Dataset 2: Customer Clustering**
-Data Standardization: Normalized variables on different scales (1-5, 1-7, 1-8)
-Hierarchical Clustering: Complete linkage method with Euclidean distance
-Cluster Validation:
-  Silhouette analysis (average = 0.62 for 6 clusters)
-  Dendrogram analysis showing clear separation at distance = 4
-  Elbow method confirming diminishing returns after 6 clusters
+Data Standardization: Normalized variables on different scales (1-5, 1-7, 1-8) <br/>
+Hierarchical Clustering: Complete linkage method with Euclidean distance <br/>
+Cluster Validation: <br/>
+ - Silhouette analysis (average = 0.62 for 6 clusters)
+ - Dendrogram analysis showing clear separation at distance = 4
+ - Elbow method confirming diminishing returns after 6 clusters
 
-- **Data Preprocessing**: Handled missing values, scaled variables, and normalized key features  
-- **Exploratory Data Analysis (EDA)**: Used visualization to identify key behavioral patterns  
-- **Clustering Algorithms**:
+ **Data Preprocessing**: Handled missing values, scaled variables, and normalized key features  <br/>
+ **Exploratory Data Analysis (EDA)**: Used visualization to identify key behavioral patterns  <br/>
+ **Clustering Algorithms**: <br/>
   - *K-Means Clustering* to create customer groups  
   - *Elbow Method* and *Silhouette Score* to determine the optimal number of clusters  
 - **PCA (Principal Component Analysis)** for dimensionality reduction and visualization
