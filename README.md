@@ -1,6 +1,4 @@
-<p align= "center">
-  <img src="https://github.com/anniliu0502/Marketing-Analytics-Portfolio/blob/ce32f0681d50cb116fc70a722513f861adea4446/Marketing%20Analytics%20Banner%20.png" alt="Banner"  width="100%" style="aspect-ratio:5/1; object-fit: cover;" >
-</p>
+![Banner](https://github.com/anniliu0502/Marketing-Analytics-Portfolio/raw/main/Marketing%20Analytics%20Banner%20.png)
 
 ## Marketing Analytics Portfolio  
 *Turning data and curiosity into marketing magic.*
